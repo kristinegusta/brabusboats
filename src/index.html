@@ -1,349 +1,336 @@
 ---
-title: 'Pixel Perfect Websites'
-description: 'Meta description for the page'
+title: 'Boten verkoop en service in Temse, Belgie'
+description: 'Gespecialiseerd in verkoop, onderhoud, winterberging, herstelling, wrapping van uw boot. '
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 eleventyNavigation:
-  key: Home
-  order: 100
+key: Home
+order: 100
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link rel="stylesheet" href="/assets/css/critical.css" />
+<link rel="stylesheet" href="/assets/css/landing.css" />
+<link rel="stylesheet" href="/assets/css/hero.css" />
 
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
+<!-- Script for Netlify Identity -->
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+        window
+            .netlifyIdentity
+            .on('init', (user) => {
+                if (!user) {
+                    window
+                        .netlifyIdentity
+                        .on('login', () => {
+                            document.location.href = '/admin/';
+                        });
+                }
+            });
+    }
+</script>
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17" />
-                    Get in Touch
-                </a>
-            </div>
-        </div>
-
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77" />
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+<section id="hero-227">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <span class="cs-topper">Brabusboats</span>
+            <h1 class="cs-title">Jouw erkende botenbedrijf</h1>
+            <p class="cs-subtitle">
+                Boten, onderhoud, winterstalling en meer.
             </p>
+        </div>
+
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 1000px)" srcset="/assets/images/keyby_in_boat_hero.JPG">
+        <source media="(min-width: 1001px)" srcset="/assets/images/hero.png">
+        <img decoding="async" src="/assets/images/hero.png" alt="Keyby and boat" width="100%" height="auto"
+            aria-hidden="true">
+    </picture>
+</section>
+
+
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-297">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--Floating Box-->
+            <div class="cs-box">
+                <span class="cs-number">7</span>
+                <span class="cs-desc">jaren in zaken</span>
+                <!--Background image for cs-box-->
+                <picture class="cs-box-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/KeybyBrabus.png">
+                    <source media="(min-width: 601px)" srcset="/assets/images/KeybyBrabus.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/KeybyBrabus.png" alt="greek pillars"
+                        width="521" height="672" aria-hidden="true">
+                </picture>
+            </div>
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/KeybyBrabus1.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/KeybyBrabus1.png">
+                <img loading="lazy" decoding="async" src="/assets/images/KeybyBrabus1.png" alt="greek pillars"
+                    width="521" height="672" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Wie we zijn</span>
+            <h2 class="cs-title">Over Brabus Boats</h2>
+            <p class="cs-text">
+                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet,
+                iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+                nonatourean olei aptent taciti sociosqu ad litora torquent per.
+
+                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet,
+                iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+                nonatourean olei aptent taciti sociosqu ad litora torquent per.
+            </p>
+            <div class="cs-flex-group">
+                <p class="cs-flex-p">
+                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit
+                    amet imperdiet for mind.
+                </p>
+                <span class="cs-name">Keyby Braun</span>
+                <span class="cs-job">CEO-Founder</span>
+                <img class="cs-quote-icon" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136"
+                    height="77" />
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Meer over ons</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-1259">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Diensten</span>
+            <h2 class="cs-title">Complete bootdiensten in Temse, België</h2>
+            <p class="cs-text">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit.
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <!--Car-->
+            <picture class="cs-image">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/yamaha.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/yamaha.png">
+                <img loading="lazy" decoding="async" src="/assets/images/yamaha.png" alt="yahama" width="417"
+                    height="468" aria-hidden="true">
+            </picture>
+            <!--Circle Graphic-->
+            <picture class="cs-circle">
+                <!--Mobile Image-->
+                <source media="(max-width: 1249px)" srcset="/assets/images/ellipse2.svg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 1250px)" srcset="/assets/images/ellipse.svg">
+                <img loading="lazy" decoding="async" src="/assets/images/ellipse.svg" alt="circle" width="724"
+                    height="665" aria-hidden="true">
+            </picture>
             <ul class="cs-card-group">
-                <!-- Review 1 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/diagnosis.svg" loading="lazy"
+                                decoding="async" alt="icon" width="50" height="50" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Bootonderhoud en diagnoses</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
                 </li>
-                <!-- Review 2 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/wheel.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Boot accessoires</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/trailers.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Onderhoud en aanpassingen boottrailers</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/aankop.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Verkoop van boten, motoren en trailers</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/stalling.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Winter en zomer stalling</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/engine.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Onderhoud boordmotoren en re-power bootmotoren</h3>
+                            <p class="cs-item-text">It’s no secret that one person alone cannot overcome the greatest
+                                humanitarian crises.</p>
+                        </div>
+                    </a>
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include 'components/cta.html' %}
+
+
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
+
+<section id="sbs-r">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-left">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/boat.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/boat.png">
+                <img aria-hidden="true" decoding="async" src="/assets/images/boat.png" alt="house" loading="lazy"
+                    width="400" height="560">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/boat2.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/boat2.png">
+                <img aria-hidden="true" decoding="async" src="/assets/images/boat2.png" alt="cabinets" loading="lazy"
+                    width="400" height="560">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-right">
+            <span class="cs-topper">Aankoop & verkoop</span>
+            <h2 class="cs-title">Nieuwe en en tweedehands boten te koop in Belgie</h2>
+            <p class="cs-text">
+                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet,
+                iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+                nonatourean olei aptent taciti sociosqu ad litora torquent per.
+            </p>
+            <a href="/blog" class="cs-button-solid">Bekijk onze boten te koop</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section id="reviews">
+    <div class="cs-container">
+        <span class="cs-topper">Our Reviews</span>
+        <h2 class="cs-title">Words From Our Customers</h2>
+        <p class="cs-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl.
+            Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo,
+            ornare. Lorem ipsum dolor sit amet.
+        </p>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png" alt="profile picture"
+                    width="80" height="80" />
+                <p class="cs-item-p">
+                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra
+                    magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat.
+                    Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                </p>
+                <span class="cs-reviewer">
+                    Jon Doe
+                    <span class="cs-desc">Homeowner</span>
+                </span>
+                <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96"
+                    height="16" />
+            </li>
+            <li class="cs-item">
+                <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png" alt="profile picture"
+                    width="80" height="80" />
+                <p class="cs-item-p">
+                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra
+                    magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat.
+                    Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                </p>
+                <span class="cs-reviewer">
+                    Jane Doe
+                    <span class="cs-desc">Homeowner</span>
+                </span>
+                <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="stars" width="96"
+                    height="16" />
+            </li>
+        </ul>
+        <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+    </div>
+</section> -->
+
+{% include 'components/cta.html' %}
 {% endblock %}

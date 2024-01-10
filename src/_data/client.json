@@ -1,15 +1,13 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Brabus Boats",
+    "email": "brabusboats@gmail.com",
+    "phoneForTel": "+32472065517",
+    "phoneFormatted": "+32 472 06 55 17",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "lineOne": "Klein-Mechelen 18",
+        "city": "Bornem",
+        "country": "Belgium",
+        "zip": "2880"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "https://www.brabusboats.be"
 }

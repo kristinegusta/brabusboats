@@ -1,0 +1,637 @@
+/* STYLES FOR ABOVE THE FOLD */
+
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-227 {
+        /* Centers button */
+        text-align: center;
+        /* changes on tablet */
+        padding: 0 calc(16 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+        /* prevents overflow from the lines extending past the screen width */
+        overflow: hidden;
+        display: flex;
+        height: 100vh;
+
+        .cs-picture {
+            /* Background Image */
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            &:before {
+                /* Black Color Overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.6;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes image act like a background-image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+            /* 144px - 300px - leaving extra space for the navigation */
+            /* changes on tablet */
+            padding: clamp(9rem, 25.95vw, 18.75rem) 0 0;
+            /* 60px - 200px */
+            padding-bottom: clamp(3.75rem, 12.5vw, 25rem);
+            margin: auto;
+            position: relative;
+
+            &:before {
+                /* Left Line */
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: -moz-linear-gradient(top,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-flex-group {
+            /* 60px - 220px */
+            margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
+            /* changes on tablet */
+            margin-left: calc(16 / 16 * 1rem);
+            width: 80vw;
+            /* 464px - 562px */
+            max-width: clamp(29rem, 60vw, 35.125rem);
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .cs-topper {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: left;
+            letter-spacing: 0.1rem;
+            font-weight: 700;
+            color: var(--primaryLight);
+            margin-bottom: calc(16 / 16 * 1rem);
+            display: block;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.2375rem, 2.7vw, 2.5125rem);
+            font-weight: 500;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: left;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 auto clamp(1.5rem, 3vw, 2rem) 0;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-subtitle {
+            text-align: left;
+            font-family: "Montserrat", Arial, sans-serif;
+            color: var(--bodyTextColorWhite);
+            font-size: clamp(1.5375rem, 2.1vw, 1.9125rem);
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .cs-text {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: left;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            /* 40px - 48px */
+            margin-bottom: clamp(2.5rem, 4vw, 3rem);
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            width: calc(180 / 16 * 1rem);
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 calc(20 / 16 * 1rem) calc(16 / 16 * 1rem) 0;
+            color: #fff;
+            padding: 0;
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-transparent {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            width: calc(180 / 16 * 1rem);
+            /* 46px - 56px */
+            height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            padding: 0;
+            background-color: transparent;
+            border: 1px solid var(--bodyTextColorWhite);
+            box-sizing: border-box;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                background: #000;
+                opacity: 1;
+                /* so it sits on top of the border */
+                top: -1px;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                z-index: -1;
+                transform-origin: left;
+                /* this is what creates the grow affect on hover */
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    transform: scaleX(1);
+                }
+            }
+
+            .cs-img {
+                display: block;
+                margin-right: calc(12 / 16 * 1rem);
+            }
+        }
+
+        .cs-card-group {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .cs-item {
+            list-style: none;
+            position: relative;
+            box-sizing: border-box;
+
+            &:before {
+                /* Top Line */
+                content: "";
+                width: 100vw;
+                height: 1px;
+                background: -moz-linear-gradient(left,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:last-of-type {
+                &:after {
+                    /* Bottom line on last card */
+                    content: "";
+                    width: 100vw;
+                    height: 1px;
+                    background: -moz-linear-gradient(left,
+                            rgba(250, 251, 252, 0.5) 0%,
+                            rgba(250, 251, 252, 0) 100%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left,
+                            rgba(250, 251, 252, 0.5) 0%,
+                            rgba(250, 251, 252, 0) 100%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    opacity: 1;
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .cs-link {
+            text-align: left;
+            text-decoration: none;
+            /* changes on tablet */
+            padding: calc(28 / 16 * 1rem) calc(16 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+
+            &:hover {
+                &:before {
+                    opacity: 0.4;
+                }
+            }
+
+            &:before {
+                /* Hover Box */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--primary);
+                opacity: 0;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-number {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 900;
+            /* 24px - 32px */
+            margin-bottom: clamp(1.5rem, 4vw, 2rem);
+            color: var(--primaryLight);
+            display: block;
+        }
+
+        .cs-h2 {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            padding: 0;
+            margin: 0;
+            margin-bottom: calc(16 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            z-index: 10000;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 3vw, 1rem);
+            margin: 0;
+            padding: 0;
+            max-width: calc(500 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-227 {
+        /* 32px - 40px */
+        padding: 0 clamp(2rem, 5vw, 2.5rem);
+
+        .cs-container {
+            padding: clamp(3rem, 1.95vw, 4.75rem) 0 calc(64 / 16 * 1rem) 0;
+
+            &:after {
+                /* Right Line */
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: -moz-linear-gradient(top,
+                        rgba(250, 251, 252, 0) 0%,
+                        rgba(250, 251, 252, 0.5) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,
+                        rgba(250, 251, 252, 0) 0%,
+                        rgba(250, 251, 252, 0.5) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .cs-title {
+            margin: 0;
+            text-align: center;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .cs-flex-group {
+            /* 44px - 88px */
+            margin-left: clamp(2.75rem, 5.9vw, 5.5rem);
+            margin-right: clamp(2.75rem, 5.9vw, 5.5rem);
+            width: calc(100% - clamp(2.75rem, 5.9vw, 5.5rem));
+            max-width: unset;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-subtitle {
+            font-size: clamp(1.338rem, 1vw, 1.5125rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: 0;
+        }
+
+        .cs-card-group {
+            flex-direction: row;
+            position: relative;
+
+            &:before {
+                /* Top Line */
+                content: "";
+                /* make it extend past the left and right of the screen */
+                width: 150vw;
+                height: 1px;
+                background: -moz-linear-gradient(left,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,
+                        rgba(250, 251, 252, 0.5) 0%,
+                        rgba(250, 251, 252, 0) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                /* these two properties center the line horizontally */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .cs-item {
+            &:before {
+                width: 1px;
+                height: 100vh;
+                background: -moz-linear-gradient(top,
+                        rgba(250, 251, 252, 0) 0%,
+                        rgba(250, 251, 252, 0.5) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,
+                        rgba(250, 251, 252, 0) 0%,
+                        rgba(250, 251, 252, 0.5) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                top: auto;
+                left: auto;
+                right: 0;
+                bottom: calc(-64 / 16 * 1rem);
+            }
+
+            &:nth-of-type(1) {
+
+                /* makes the first line under the buttons shorter */
+                &:before {
+                    height: calc(630 / 16 * 1rem);
+                }
+            }
+
+            &:last-of-type {
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .cs-link {
+            /* 44px - 64px top & bottom, 48px - 88px left & right */
+            padding: clamp(2.75rem, 5.9vw, 5.5rem) clamp(3rem, 5.9vw, 5.5rem);
+        }
+    }
+}
+
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #hero-227 {
+        background: url("/assets/images/hero.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* creates parallax effect on background image */
+        background-attachment: fixed;
+
+        /* remove img tag so we can make parallax work */
+        .cs-picture {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-227 {
+            .cs-background {
+                &:before {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    .services {
+        width: 90%;
+        max-width: calc(1320 / 16 * 1em);
+        margin: auto;
+        margin-top: calc(-167 / 16 * 1em);
+        margin-bottom: calc(50 / 16 * 1em);
+        padding: calc(50 / 16 * 1em) calc(20 / 16 * 1em);
+        background: #fff;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+        border-top: calc(6 / 16 * 1em) solid var(--primary);
+        border-radius: calc(5 / 16 * 1em);
+        position: relative;
+        z-index: 100;
+
+        .card {
+            width: 100%;
+            max-width: calc(357 / 16 * 1em);
+            margin: auto;
+            margin-bottom: calc(50 / 16 * 1em);
+            display: block;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            picture {
+                width: calc(88 / 16 * 1em);
+                height: calc(88 / 16 * 1em);
+                margin: auto;
+                margin-bottom: calc(23 / 16 * 1em);
+                background: var(--primary);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: calc(48 / 16 * 1em);
+                    height: calc(48 / 16 * 1em);
+                }
+            }
+
+            h2 {
+                font-size: calc(32 / 16 * 1em);
+                font-weight: 700;
+                line-height: calc(27 / 20 * 1em);
+                text-align: center;
+                margin-bottom: calc(13 / 20 * 1em);
+                color: #1a1a1a;
+            }
+
+            p {
+                line-height: calc(24 / 18 * 1em);
+                text-align: center;
+                width: 100%;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+/* Inbetween */
+@media only screen and (min-width: 768px) {
+    .services {
+        font-size: min(1.8vw, 1em);
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .card {
+            max-width: calc(325 / 16 * 1em);
+            margin: 0;
+        }
+    }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+    .services {
+        padding: calc(50 / 16 * 1em) calc(80 / 16 * 1em);
+
+        .card {
+            max-width: calc(357 / 16 * 1em);
+        }
+    }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode {
+        #services {
+            background: var(--medium);
+
+            picture {
+                background: var(--primaryDark);
+            }
+
+            h2 {
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+}

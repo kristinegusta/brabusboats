@@ -152,6 +152,7 @@
             transition: color 0.3s;
         }
 
+
         .cs-item-text {
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
@@ -400,6 +401,11 @@
             line-height: 1.5em;
             margin: 0 0 1rem;
             color: #353535;
+
+            span {
+                color: var(--primary);
+                font-weight: 600;
+            }
         }
 
         .cs-quote-icon {
@@ -648,7 +654,7 @@
 }
 
 /*-- -------------------------- -->
-<---       Meet The Team        -->
+<---       Boats for sale        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -689,6 +695,31 @@
             max-width: 20ch;
             color: var(--bodyTextColorWhite);
         }
+
+        .cs-sold {
+            font-size: 10px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            padding: 0px 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cs-available {
+            font-size: 12px;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            padding: 0px 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
 
         .cs-button-solid {
             font-size: calc(16 / 16 * 1rem);
@@ -785,14 +816,13 @@
 
         .cs-picture {
             width: 100%;
-            height: calc(480 / 16 * 1rem);
-            /* removed at tablet */
-            aspect-ratio: (328/480);
+            height: auto;
             /* clips img tag from overflowing it on hover */
             overflow: hidden;
             display: block;
             position: relative;
             z-index: 1;
+            aspect-ratio: 1/1;
 
             img {
                 width: 100%;
@@ -926,8 +956,7 @@
         }
 
         .cs-picture {
-            /* remove the aspect ratio so the height can be squished */
-            aspect-ratio: initial;
+            aspect-ratio: 1/1;
         }
     }
 }

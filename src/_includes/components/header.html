@@ -41,13 +41,17 @@
           <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0" {% endif %}>
 
             {# Similarly, if the link is active, apply the necessary classes #}
+            {% if not hasChild %}
             <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
               {{ entry.key }}
-              {% if hasChild %}
+            </a>
+            {% else %}
+            <span class="cs-li-link">
+              {{ entry.key }}
               <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
                 alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-              {% endif %}
-            </a>
+            </span>
+            {% endif %}
 
             {# Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link #}
             {% if hasChild %}

@@ -575,6 +575,7 @@ html {
   #cs-navigation .cs-dropdown .cs-li-link {
     position: relative;
     transition: opacity 0.3s;
+    cursor: pointer;
   }
   #cs-navigation .cs-drop-icon {
     width: 0.9375rem;
@@ -743,6 +744,7 @@ html {
     position: fixed;
     z-index: 10000;
     font-family: "Montserrat", Arial, sans-serif;
+    transition: background-color 0.5s ease;
   }
   #cs-navigation:after {
     /* on scroll overlay */

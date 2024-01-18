@@ -1,0 +1,87 @@
+---
+title: 'Bootonderhoud en diagnoses'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'bootonderhoud-en-diagnoses/'
+eleventyNavigation:
+    parent: Diensten
+    key: Bootonderhoud en diagnoses
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/bootonderhoud.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Bootonderhoud en diagnoses</h1>
+    <picture>
+        <!-- preloadImg: '/assets/images/cabinets2.jpg' -->
+        <source media="(max-width: 600px)" srcset="/assets/images/onderhoud.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/onderhoud.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/onderhoud.jpg" alt="kitchen cabinets"
+            loading="eager" width="2500" height="1667">
+    </picture>
+
+</section>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-1532">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/onderhoud2.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/onderhoud2.png">
+                <img loading="lazy" decoding="async" src="/assets/images/onderhoud2.png" alt="repair" width="522"
+                    height="540">
+            </picture>
+            <!--Floating Blob-->
+            <!-- <img class="cs-floater"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-events-left.svg"
+                alt="graphic" loading="lazy" decoding="async" height="710" width="690"> -->
+        </div>
+        <div class="cs-content">
+            <h2>Bootonderhoud en diagnoses</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4-6</h4>
+            <p>
+                Brabusboats is voorzien van een diagnose computer waar we de motoren kunnen uitlezen.
+                Het uitlezen is belangrijk zodat we al bestaande foutmelden kunnen nakijken of deze een gevolg kunnen
+                geven aan
+                de motor.
+            </p>
+            <h3>Heading 3</h3>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ol>
+            <h4>Ook zijn we gespecialiseerd om aan transoms and sterndrive’s te werken indien nodig te vernieuwen.
+                Waarom u onderhoud of interventie laten uitvoeren door ons:</h4>
+            <ul>
+                <li>gebruik van orginele onderdelen</li>
+                <li>gebruik van de juiste werktools / special tools</li>
+                <li>diagnose computer</li>
+                <li>juiste werkmethode ( volgens de fabrikant van de motor)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

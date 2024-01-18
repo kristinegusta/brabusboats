@@ -1,0 +1,340 @@
+/* PAGE-SPECIFIC STYLES FOR THE STALLING PAGE */
+
+/*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #reviews {
+        margin: auto;
+        padding-top: calc(120 / 16 * 1rem);
+        padding-bottom: calc(50 / 16 * 1rem);
+
+        .container {
+            width: 96%;
+            max-width: calc(1320 / 16 * 1rem);
+        }
+
+        .review {
+            width: 100%;
+            max-width: calc(410 / 16 * 1rem);
+            margin: auto;
+            margin-bottom: calc(100 / 16 * 1rem);
+            padding: calc(64 / 16 * 1rem) calc(30 / 16 * 1rem) calc(18 / 16 * 1rem) calc(30 / 16 * 1rem);
+            background: #fff;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+            border-radius: calc(5 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .profile {
+                width: calc(99 / 16 * 1rem);
+                height: calc(99 / 16 * 1rem);
+                margin-bottom: calc(16 / 16 * 1rem);
+                margin-left: 0;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: calc(-51 / 16 * 1rem);
+                left: calc(30 / 16 * 1rem);
+            }
+
+            p {
+                line-height: 1.5em;
+                text-align: left;
+                margin-bottom: calc(28 / 16 * 1rem);
+            }
+
+            .star-group {
+                margin-top: auto;
+                padding-top: calc(16 / 16 * 1rem);
+                border-top: 1px solid #e7e7e7;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                .name {
+                    font-weight: bold;
+                    line-height: calc(24 / 16 * 1rem);
+                    text-align: left;
+                    color: #1a1a1a;
+                    display: block;
+                }
+
+                .desc {
+                    font-weight: 400;
+                    color: #575757;
+                    display: block;
+                }
+
+                img {
+                    width: calc(91 / 16 * 1rem);
+                    height: calc(15 / 16 * 1rem);
+                    margin: 0;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+    #reviews {
+        padding-top: calc(150 / 16 * 1rem);
+        padding-bottom: calc(50 / 16 * 1rem);
+
+        .container {
+            font-size: min(1.4vw, 1em);
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: calc(30 / 16 * 1rem);
+        }
+
+        .review {
+            margin: 0;
+            margin-bottom: calc(150 / 16 * 1rem);
+
+            &:last-of-type {
+                margin-bottom: calc(150 / 16 * 1rem);
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode {
+        #reviews {
+            .review {
+                background: var(--medium);
+
+                .name {
+                    color: #fff;
+                }
+
+                .desc {
+                    color: #fff;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #RPsbs-1593,
+    #RPsbsr-1593 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(48 / 16 * 1rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width .3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+            font-size: min(1.959vw, .745em);
+            width: calc(630 / 16 * 1em);
+            /* we set a minimum height so it never gets smaller than this value */
+            min-height: calc(628 / 16 * 1em);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            /* the percentage heights allow them to be responsive to the height of the parent cs-image-group. On desktop, when the felxbox is set to aling-items: stretch, the cs-image group will stretch to fill the height of the parent container. So when you add more content to the cs-content group and make it taller, the cs-image group will get taller with it and every image will stretch with the parent, making this entire group responsive to the changing amounts of content next to it */
+            width: calc(413 / 16 * 1em);
+            height: 79.617834%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .cs-picture2 {
+            width: calc(413 / 16 * 1em);
+            height: 44.585987%;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+
+    #RPsbs-1593,
+    #RPsbsr-1593 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            /* this padding sets a minimum gap between the top and bottom of the content div and the top and bottom of the cs-image-group */
+            padding: calc(60 / 16 * 1rem) 0;
+            /* while the cs-image-group will stretch to fill the height of the parent, this property will ensure that the cs-content group aligns itse;f in the center of the parent div instead of stretching */
+            align-self: center;
+        }
+
+        .cs-image-group {
+            font-size: min(1.2vw, 1em);
+            flex: none;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+
+        #RPsbs-1593,
+        #RPsbsr-1593 {
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #RPsbsr-1593 {
+        background-color: #f7f7f7;
+
+        .cs-picture1 {
+            left: auto;
+            right: 0;
+        }
+
+        .cs-picture2 {
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #RPsbsr-1593 {
+        .cs-image-group {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #RPsbsr-1593 {
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+}

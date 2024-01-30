@@ -35,17 +35,17 @@ for (const item of dropDowns) {
 }
 
 // change color on scroll
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.getElementById("cs-navigation");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbar = document.getElementById("cs-navigation");
 
-  window.onscroll = function () {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      navbar.style.backgroundColor = "rgb(8, 32, 50, 0.8)"; // Change to your desired color
-    } else {
-      navbar.style.backgroundColor = "unset"; // Default color when not scrolled
-    }
-  };
-});
+//   window.onscroll = function () {
+//     if (
+//       document.body.scrollTop > 20 ||
+//       document.documentElement.scrollTop > 20
+//     ) {
+//       navbar.style.backgroundColor = "rgb(8, 32, 50, 0.8)"; // Change to your desired color
+//     } else {
+//       navbar.style.backgroundColor = "unset"; // Default color when not scrolled
+//     }
+//   };
+// });

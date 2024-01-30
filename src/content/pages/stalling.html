@@ -1,10 +1,10 @@
 ---
-title: 'Winter en zomer stalling'
+title: 'Wintestalling'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/accesories.jpg'
-permalink: 'winter-en-zomer-stalling/'
+permalink: 'winterstalling/'
 eleventyNavigation:
-    key: Winter en zomer stalling
+    key: Winterstalling
     parent: Diensten
     order: 400
 ---
@@ -12,26 +12,81 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/stalling.css">
+<link rel="stylesheet" href="/assets/css/accesories.css">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Winter en zomer stalling</h1>
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/accesories.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/accesories.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/accesories.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
+<section id="int-hero">
+    <h1 id="home-h">Winterstalling</h1>
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/accesories.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/accesories.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/accesories.jpg" alt="new home" width="2500"
+            height="1667" loading="eager">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1083">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Winterstalling met Zorg - Vochtvrij en Verwarmd bij Brabusboats</h2>
+            <p class="cs-text">
+
+                Brabusboats biedt winterstalling aan. Wij hebben een vochtvrije verwarmde loods van 750m² die we ter
+                beschikking zetten voor stalling.
+                Wij werken enkel onder het regime van “ Full service”. Dus de boten die bij ons gestald worden , worden
+                ook door ons onderhouden.
+                Wij werken er dagelijks aan om onze standaard op het hoogste niveau te houden en kiezen hiervoor om
+                boten die onderhouden worden door andere bedrijven of door de eigenaar zelf niet te stallen bij ons.
+                Hebt u vragen of wenst u een offerte te krijgen hiervoor mag u ons altijd contacteren.
+
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/pages/stalling/stalling.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/pages/stalling/stalling.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/pages/stalling/stalling.png"
+                        alt="Bimini top" width="413" height="240" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/pages/stalling/stalling1.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/pages/stalling/stalling1.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/pages/stalling/stalling1.png"
+                        alt="Inbouw console" width="413" height="240" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/pages/stalling/stalling2.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/pages/stalling/stalling2.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/pages/stalling/stalling2.png"
+                        alt="Navigatie" width="413" height="240" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
 
 
-
-    {% include 'components/cta.html' %}
+{% include 'components/cta.html' %}
 
 {% endblock %}

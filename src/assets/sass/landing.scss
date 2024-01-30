@@ -665,7 +665,7 @@
 
         p {
             color: white;
-            margin: 2rem 0;
+            margin: 2rem 0 1rem 0;
         }
 
         .cs-container {
@@ -722,22 +722,24 @@
 
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
+            font-size: calc(16 / 16 * 0.85em);
             /* 46px - 56px */
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             text-decoration: none;
             font-weight: 700;
             text-align: center;
-            margin: 0;
+            margin: 0 auto 1rem auto;
             color: #fff;
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(32 / 16 * 1rem);
             background-color: var(--primary);
-            display: inline-block;
+            display: block;
             position: relative;
             z-index: 1;
             /* prevents padding from adding to the width */
             box-sizing: border-box;
+            width: 100%;
+
 
             &:before {
                 content: "";
@@ -783,6 +785,8 @@
             justify-content: flex-end;
             align-items: center;
             position: relative;
+            margin-bottom: 3rem;
+            max-height: 500px;
 
             &:hover {
                 cursor: pointer;
@@ -958,6 +962,15 @@
         .cs-picture {
             aspect-ratio: 1/1;
         }
+
+        .cs-decorative {
+            display: none;
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1em);
+            margin: 0 auto 2rem auto;
+        }
     }
 }
 
@@ -971,14 +984,13 @@
         .cs-card-group {
             flex-direction: row;
         }
-    }
-}
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #blog-986 {
-            background-color: var(--dark);
+        .cs-group {
+            width: 100%;
+        }
+
+        .cs-button-solid {
+            width: fit-content;
         }
     }
 }

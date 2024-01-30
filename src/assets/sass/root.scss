@@ -938,7 +938,8 @@ html {
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         border: 1px solid #ffffff2e;
-        position: fixed;
+        // position: fixed;
+        position: absolute;
         z-index: 10000;
         font-family: "Montserrat", Arial, sans-serif;
         transition: background-color 0.5s ease;
@@ -1173,6 +1174,7 @@ html {
             margin-bottom: calc(30 / 16 * 1rem);
             color: #fff;
             position: relative;
+            font-weight: 500;
         }
 
         p {

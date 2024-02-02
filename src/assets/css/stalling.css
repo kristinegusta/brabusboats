@@ -1,0 +1,161 @@
+/*-- -------------------------- -->
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1645 {
+    padding: var(--sectionPadding);
+  }
+  #services-1645 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(2.5rem, 3.9vw, 4rem);
+  }
+  #services-1645 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+  }
+  #services-1645 .cs-title {
+    color: var(--headerColor);
+  }
+  #services-1645 .cs-text {
+    margin-bottom: 1rem;
+    color: var(--bodyTextColor);
+    opacity: 0.8;
+  }
+  #services-1645 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #services-1645 .cs-text a {
+    opacity: 1;
+    color: var(--secondary);
+  }
+  #services-1645 .cs-button-solid {
+    font-size: 1rem;
+    text-align: center;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    font-weight: 700;
+    text-decoration: none;
+    min-width: 9.1875rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    color: var(--bodyTextColorWhite);
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #services-1645 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #services-1645 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services-1645 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #services-1645 .cs-card-group {
+    width: 100%;
+    max-width: 50.1875rem;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #services-1645 .cs-item {
+    list-style: none;
+    /* .cs-h3 and .cs-item-text both use text-align: inherit, so change the below to affect the whole item */
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    /* 20px - 48px */
+    padding: clamp(1.5rem, 3.2vw, 2rem);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+    /* 16px - 24px */
+    gap: clamp(1rem, 1.5vw, 1.5rem);
+    grid-column: span 12;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #services-1645 .cs-item:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+  #services-1645 .cs-icon {
+    width: 3rem;
+    height: auto;
+    margin: 0;
+    display: block;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #services-1645 .cs-h3 {
+    font-size: 1.25rem;
+    text-align: inherit;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #services-1645 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-align: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    opacity: 0.8;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1645 .cs-item {
+    flex-direction: row;
+    grid-column: span 6;
+    box-shadow: none;
+  }
+}
+/* Large Desktop - 1024px */
+@media only screen and (min-width: 80rem) {
+  #services-1645 .cs-container {
+    flex-direction: row;
+  }
+  #services-1645 .cs-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=stalling.css.map */

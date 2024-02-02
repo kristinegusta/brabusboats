@@ -397,6 +397,7 @@ html {
         transition: background-color 0.5s ease;
         font-family: "Montserrat", Arial, sans-serif;
         font-weight: 500;
+        background-color: #1a1a1a;
 
         &:before {
             /* mobile nav overlay on open */
@@ -664,6 +665,7 @@ html {
             color: var(--bodyTextColorWhite);
             display: inline-block;
             position: relative;
+            text-transform: uppercase;
 
             &.cs-active {
                 color: var(--primary);
@@ -899,6 +901,7 @@ html {
                 box-sizing: border-box;
                 color: var(--bodyTextColorWhite);
                 display: block;
+                text-transform: initial;
                 transition:
                     color 0.3s,
                     background-color 0.3s;
@@ -937,12 +940,12 @@ html {
         padding: 0;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-        border: 1px solid #ffffff2e;
         // position: fixed;
-        position: absolute;
+        position: fixed;
         z-index: 10000;
         font-family: "Montserrat", Arial, sans-serif;
         transition: background-color 0.5s ease;
+        background-color: transparent;
 
         &:after {
             /* on scroll overlay */
@@ -1029,7 +1032,7 @@ html {
 
         .cs-li-link {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 0.6vw, 1rem);
+            font-size: clamp(0.875rem, 0.6vw, 0.9rem);
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
@@ -1037,6 +1040,8 @@ html {
             display: block;
             position: relative;
             transition: color 0.3s;
+            text-transform: uppercase;
+            font-weight: 500;
 
             &:before {
                 content: "";
@@ -1168,7 +1173,7 @@ html {
             font-size: calc(64 / 30 * 1rem);
             text-align: center;
             width: 96%;
-            max-width: calc(500 / 16 * 1rem);
+            max-width: 70%;
             margin: 0 auto;
             margin-top: calc(70 / 16 * 1rem);
             margin-bottom: calc(30 / 16 * 1rem);

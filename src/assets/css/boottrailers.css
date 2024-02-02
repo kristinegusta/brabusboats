@@ -1,88 +1,295 @@
 /* PAGE-SPECIFIC STYLES FOR THE BOOTTRAILERS PAGE */
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---       Boats for sale        -->
 <--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
-@media only screen and (min-width: 0em) {
-  #gallery {
-    /* Centers button */
-    text-align: center;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-986 {
     padding: var(--sectionPadding);
-    position: relative;
-    /* Prevents overflow from the image going off screen */
-    overflow: hidden;
+    background-color: #1c1c1c;
   }
-  #gallery .cs-container {
+  #blog-986 .sold {
+    opacity: 0.5;
+  }
+  #blog-986 p {
+    color: white;
+    margin: 2rem 0 1rem 0;
+  }
+  #blog-986 .cs-container {
     width: 100%;
-    max-width: 82.625em;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
     margin: auto;
-  }
-  #gallery .cs-image-group {
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    width: 100%;
-    max-width: 82.625em;
-    margin: 0 auto 3.75rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.875em;
-  }
-  #gallery .cs-row {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    gap: 1.875em;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #gallery .cs-picture {
+  #blog-986 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #blog-986 .cs-title {
+    margin-bottom: 2rem;
+    max-width: 20ch;
+    color: var(--bodyTextColorWhite);
+  }
+  #blog-986 .cs-sold {
+    font-size: 10px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 0px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  #blog-986 .cs-available {
+    font-size: 12px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    padding: 0px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  #blog-986 .cs-button-solid {
+    font-size: 0.85em;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
     display: block;
     position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    width: 100%;
   }
-  #gallery .cs-picture img {
+  #blog-986 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--secondary);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #blog-986 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #blog-986 .cs-button-solid {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-986 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    position: relative;
+  }
+  #blog-986 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    max-height: 500px;
+  }
+  #blog-986 .cs-item:hover {
+    cursor: pointer;
+  }
+  #blog-986 .cs-item:hover .cs-info:before {
+    opacity: 1;
+    background-color: var(--secondary);
+  }
+  #blog-986 .cs-item:hover .cs-picture img {
+    transform: scale(1.15);
+  }
+  #blog-986 .cs-item:hover .cs-date {
+    color: #fff;
+  }
+  #blog-986 .cs-item:hover .cs-icon {
+    filter: brightness(150%);
+  }
+  #blog-986 .cs-item:hover .cs-link {
+    color: #fff;
+  }
+  #blog-986 .cs-picture {
+    width: 100%;
+    height: auto;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 1/1;
+  }
+  #blog-986 .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+    transition: transform 0.9s;
   }
-  #gallery .cs-row-1 .cs-picture1 {
-    width: 26.25em;
-    height: 35.4375em;
+  #blog-986 .cs-info {
+    width: 83%;
+    max-width: 26.25rem;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+    /* prevents padding from affecting the height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
   }
-  #gallery .cs-row-1 .cs-picture2 {
-    width: 26.25em;
-    height: 39.3125em;
+  #blog-986 .cs-info:before {
+    /* background-color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 0.8;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: background-color 0.3s, opacity 0.3s;
   }
-  #gallery .cs-row-1 .cs-picture3 {
-    width: 26.25em;
-    height: 32em;
+  #blog-986 .cs-date {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: #bababa;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
   }
-  #gallery .cs-row-2 .cs-picture1 {
-    width: 26.25em;
-    height: 30.75em;
+  #blog-986 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    transition: filter 0.3s;
   }
-  #gallery .cs-row-2 .cs-picture2 {
-    width: 26.25em;
-    height: 32.3125em;
+  #blog-986 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #fff;
+    display: block;
   }
-  #gallery .cs-row-2 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
+  #blog-986 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1.25rem 0;
+    color: #f7f7f7;
+    display: block;
   }
-  #gallery .cs-row-3 .cs-picture1 {
-    width: 26.25em;
-    height: 39.0625em;
+  #blog-986 .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    width: auto;
+    margin: 0;
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
   }
-  #gallery .cs-row-3 .cs-picture2 {
-    width: 26.25em;
-    height: 28.25em;
+  #blog-986 .cs-link:hover {
+    color: #fff;
   }
-  #gallery .cs-row-3 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
+  #blog-986 .cs-link:before {
+    /* underline */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+  }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+  #blog-986 .cs-content {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  #blog-986 .cs-title {
+    margin: 0;
+  }
+  #blog-986 .cs-picture {
+    aspect-ratio: 1/1;
+  }
+  #blog-986 .cs-decorative {
+    display: none;
+  }
+  #blog-986 .cs-button-solid {
+    font-size: 1em;
+    margin: 0 auto 2rem auto;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #blog-986 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-986 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #blog-986 .cs-group {
+    width: 100%;
+    flex: 1 0 21%;
+  }
+  #blog-986 .cs-button-solid {
+    width: fit-content;
   }
 }
 

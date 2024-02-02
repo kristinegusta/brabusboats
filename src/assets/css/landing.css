@@ -102,7 +102,7 @@
     height: 5rem;
     box-sizing: border-box;
     /* prevents border from affecting height and width */
-    background-color: var(--secondaryLightLight);
+    background-color: #f7f7f7;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -550,7 +550,7 @@
 @media only screen and (min-width: 0rem) {
   #blog-986 {
     padding: var(--sectionPadding);
-    background-color: #1a1a1a;
+    background-color: #1c1c1c;
   }
   #blog-986 p {
     color: white;

@@ -1,0 +1,73 @@
+---
+title: 'Re-power bootmotoren'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'repower-bootmotoren/'
+eleventyNavigation:
+    key: Re-power bootmotoren
+    parent: Diensten
+    order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/repower.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Re-power bootmotoren</h1>
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/pages/repower/repowering_motoren.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/pages/repower/repowering_motoren.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/pages/repower/repowering_motoren.jpg"
+            alt="new home" width="2500" height="1667" loading="eager">
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Video                      -->
+<!-- ============================================ -->
+
+<section id="video-548">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Re-power dienst</span>
+            <h2 class="cs-title">Verbeter uw Vaarervaring met Efficiënte en Op Maat Gemaakte Motoroplossingen</h2>
+            <p class="cs-text">
+                Zoals in andere branches is de botenmarkt ook steeds bezig met zijn ontwikkeling.
+                Één van de belangrijkste kenmerken zijn motoren die minder verbruiken. Meer en
+                meer klanten vragen dan ook om een veranderingen te doen aan hun motor. Dit kan
+                gaan naar een meer krachtigere motor of meer zuinigere motor, en zelfs ombouwing
+                van binnen naar buitenboordmotor. Wij hebben recent hier ook een project van
+                gedaan. Voor uw offerte op maat of meer informatie contacteer ons:
+            </p>
+        </div>
+        <a href="" class="cs-big-link">
+            <!--Background Image-->
+            <picture class="cs-background">
+                <source media="(min-width: 1024px)" srcset="/assets/images/pages/repower/repowering_motoren.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/repower/repowering_motoren.jpg">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/repower/repowering_motoren.jpg">
+                <img aria-hidden="true" loading="lazy" decoding="async"
+                    src="/assets/images/pages/repower/repowering_motoren.jpg" alt="meeting" width="1280" height="580">
+            </picture>
+            <!--Play Icon-->
+            <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async"
+                src="/assets/images/pages/repower/play.svg" alt="play icon" width="110" height="110">
+        </a>
+    </div>
+</section>
+
+
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

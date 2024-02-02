@@ -4,187 +4,255 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #services-880 {
+  #services-1665 {
     padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
   }
-  #services-880 .cs-container {
+  #services-1665 .cs-container {
     width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 34.375rem;
+    /* changes to 1280px at small desktop */
+    max-width: 36.5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 3.9vw, 4rem);
   }
-  #services-880 .cs-content {
-    /* set text align to left if content needs to be left aligned */
+  #services-1665 .cs-content {
     text-align: left;
     width: 100%;
-    max-width: 32.625rem;
-    margin-right: auto;
+    max-width: 39.375rem;
     display: flex;
     flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
+    justify-content: center;
   }
-  #services-880 .cs-title {
-    /* max width of 18 characters, includes spaces between words */
-    max-width: 18ch;
+  #services-1665 .cs-title {
+    /* 28px - 40px */
+    margin: 0 0 clamp(1.75rem, 3.9vw, 2.5rem) 0;
   }
-  #services-880 .cs-text {
-    margin-bottom: 1rem;
+  #services-1665 .cs-picture {
+    width: 100%;
+    /* 328px - 640px */
+    height: clamp(20.5rem, 60vw, 40rem);
+    display: block;
+    position: relative;
   }
-  #services-880 .cs-text:last-of-type {
-    margin-bottom: 2rem;
+  #services-1665 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  #services-880 .cs-text span {
-    color: var(--primary);
-    font-weight: 600;
+  #services-1665 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 28px - 40px */
+    gap: clamp(1.75rem, 4vw, 2.5rem);
   }
-  #services-880 ul {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-  }
-  #services-880 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
+  #services-1665 .cs-faq-group {
+    padding: 0;
     margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.4vw, 1.25rem);
+  }
+  #services-1665 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #e8e8e8;
+    padding: 0;
+    box-sizing: border-box;
+    transition: border-bottom 0.3s;
+  }
+  #services-1665 .cs-faq-item.active .cs-indicator:before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  #services-1665 .cs-faq-item.active .cs-indicator:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  #services-1665 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    padding-top: 1rem;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  #services-1665 .cs-faq-item:hover {
+    cursor: pointer;
+  }
+  #services-1665 .cs-button {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    padding: 1rem 1rem 0 1rem;
+    border: none;
+    background: transparent;
+    color: var(--headerColor);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* 16px - 24px */
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #services-1665 .cs-button:hover {
+    cursor: pointer;
+  }
+  #services-1665 .cs-indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #services-1665 .cs-indicator:before {
+    /* left line */
+    content: "";
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #767676;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+  }
+  #services-1665 .cs-indicator:after {
+    /* right line */
+    content: "";
+    width: 1rem;
+    height: 0.125rem;
+    background-color: #767676;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.5s;
+  }
+  #services-1665 .cs-button-text {
+    width: 90%;
+    padding: 0;
+    display: block;
+  }
+  #services-1665 .cs-item-p {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    width: 100%;
+    max-width: 33.8125rem;
+    height: 0;
+    margin: 0;
+    /* 16px - 24px */
+    padding: 0 1rem 1rem 1rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    opacity: 0;
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.3s, padding-bottom 0.3s, padding-top 0.3s;
+  }
+  #services-1665 .cs-icon {
+    width: 2rem;
+    height: auto;
+    display: block;
+  }
+  #services-1665 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
     padding: 0 1.5rem;
+    color: #fff;
     background-color: var(--primary);
     display: inline-block;
     position: relative;
     z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
   }
-  #services-880 .cs-button-solid:before {
+  #services-1665 .cs-button-solid:before {
     content: "";
-    position: absolute;
-    height: 100%;
     width: 0%;
+    height: 100%;
     background: #000;
     opacity: 1;
+    /* add a border radius below this to round corners */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
   }
-  #services-880 .cs-card-group {
+  #services-1665 .cs-button-solid:hover:before {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
   }
-  #services-880 .cs-item {
-    text-align: center;
-    list-style: none;
-    overflow: hidden;
-    background-color: #f7f7f7;
-    grid-column: span 4;
-    position: relative;
-    z-index: 1;
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  #services-880 .cs-link {
-    text-decoration: none;
-    padding: 0 0 1.25rem 0;
-    display: block;
-  }
-  #services-880 .cs-picture {
-    width: 100%;
-    height: 18.75rem;
-    background-color: var(--primaryLight);
-    /* clips the img tag corners */
-    overflow: hidden;
-    display: block;
-    position: relative;
-    z-index: 10;
-  }
-  #services-880 .cs-picture img {
+  #services-1665 .cs-floater {
+    /* 246px - 582px */
+    width: clamp(15.375rem, 50vw, 36.375rem);
+    height: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.6s, opacity 0.3s;
-  }
-  #services-880 .cs-h3 {
-    font-size: 1rem;
-    text-align: inherit;
-    line-height: 1.2em;
-    font-weight: 700;
-    padding: 0 clamp(1rem, 2vw, 1.5rem);
-    transition: color 0.3s;
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    color: white;
-    width: 100%;
-    padding: 16px 12px;
-    text-align: left;
-  }
-  #services-880 .cs-h3:before {
-    /* background-color */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #1a1a1a;
-    opacity: 0.8;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
+    left: 0rem;
+    bottom: -3rem;
     z-index: -1;
-    transition: background-color 0.3s, opacity 0.3s;
-  }
-  #services-880 .cs-item-text {
-    /* 14px - 16px  */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    text-align: inherit;
-    line-height: 1.5em;
-    color: var(--bodyTextColor);
-    margin: 0;
-    padding: 0 1.25rem;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services-880 .cs-container {
-    max-width: 80rem;
+  #services-1665 .cs-picture {
+    min-height: 29.25rem;
   }
-  #services-880 .cs-item {
-    grid-column: span 2;
+  #services-1665 .cs-wrapper {
+    max-width: 36.625rem;
   }
 }
-/* Desktop - 1200px */
-@media only screen and (min-width: 75rem) {
-  #services-880 .cs-container {
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-1665 .cs-container {
+    max-width: 80rem;
     flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
   }
-  #services-880 .cs-card-group {
-    width: 50%;
-    max-width: 39.375rem;
-    /* offsets by the same amount the cards are translated */
-    margin-bottom: 3.75rem;
-    grid-template-columns: repeat(2, 1fr);
+  #services-1665 .cs-wrapper {
+    justify-content: flex-start;
   }
-  #services-880 .cs-item {
-    grid-column: span 1;
+  #services-1665 .cs-content {
+    width: 51.815%;
+    flex: none;
   }
-  #services-880 .cs-item:nth-of-type(1), #services-880 .cs-item:nth-of-type(3) {
-    transform: translateY(3.75rem);
+  #services-1665 .cs-text {
+    margin-top: 9.75rem;
+  }
+  #services-1665 .cs-picture {
+    height: 100%;
+    min-height: 40rem;
   }
 }
 

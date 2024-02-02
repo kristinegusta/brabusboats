@@ -320,7 +320,7 @@ html {
     transition: background-color 0.5s ease;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 500;
-    background-color: #1a1a1a;
+    background-color: transparent;
   }
   #cs-navigation:before {
     /* mobile nav overlay on open */

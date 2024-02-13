@@ -4,71 +4,162 @@ eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
     preloadImg: '{{ image }}'
-    permalink: '/blog/{{ title | slug }}/index.html'
+    permalink: '/aanbod/{{ title | slug }}/index.html'
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
+<link rel="stylesheet" href="/assets/css/aanbod-een.css">
+<link rel="stylesheet" href="/assets/css/cssbox.css">
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+<section id="int-hero">
+    <picture>
+        <source media="(max-width: 600px)" srcset="{{ image }}">
+        <source media="(min-width: 601px)" srcset="{{ image }}">
+        <img aria-hidden="true" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" loading="eager" width="2500"
+            height="1667">
+    </picture>
+</section>
 
-    <!-- ============================================ -->
-    <!--              Main Blog Content               -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--              Main Blog Content               -->
+<!-- ============================================ -->
 
-    <div class="blog-container main-content-wrapper">
-        <!--Main content -->
-        <div class="main-content">
-            <!-- ============================================ -->
-            <!--                  Blog Article                -->
-            <!-- ============================================ -->
+<section id="services-1665">
+    <span class="cs-topper">{{ price }}</span>
+    <h2 class="cs-title">{{ title}}</h2>
 
-            <article class="blog-article">
-                <!--Main Article Image-->
-                <picture class="blog-mainImage">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async" />
-                </picture>
-
-                <!--Article Info-->
-                <div class="article-group">
-                    <h1 class="blog-h1">{{ title }}</h1>
-                    <div class="blog-authorGroup">
-                        <!--Author Image-->
-                        <picture class="blog-author-img">
-                            <img
-                            src="/assets/svgs/profile.svg"
-                            alt="house"
-                            width="32"
-                            height="32"
-                            decoding="async">
-                        </picture>
-                        <span class="blog-author">{{ author }}</span>
-                        <span aria-hidden="true" class="blog-dot"></span>
-                        <!--Blog Date-->
-                        <span class="blog-date">{{ date | postDate }}</span>
-                    </div>
+    <div class="cs-container">
+        <div class="cs-content">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{{ image }}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{{ image }}">
+                <img loading="lazy" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" width="605" height="690">
+            </picture>
+            <h3>Kenmerken</h3>
+            <div class="cs-kenmerken">
+                {% if merk %}
+                <div class="cs-kenmerk">
+                    <p>{{ merk }}</p>
+                    <span>Merk</span>
                 </div>
-                <section id="blog-content">
-                    {{ content | safe }}
-                </section>
-            </article>
-        </div>
-        <!-- End .main-content -->
+                {% endif %}
 
-        {% include 'components/featured-post.html' %}
+                {% if model %}
+                <div class="cs-kenmerk">
+                    <p>{{ model }}</p>
+                    <span>Model</span>
+                </div>
+                {% endif %}
+
+                {% if lengte %}
+                <div class="cs-kenmerk">
+                    <p>{{ lengte }}</p>
+                    <span>Lengte</span>
+                </div>
+                {% endif %}
+
+                {% if breedte %}
+                <div class="cs-kenmerk">
+                    <p>{{ breedte }}</p>
+                    <span>Breedte</span>
+                </div>
+                {% endif %}
+
+                {% if diepgang %}
+                <div class="cs-kenmerk">
+                    <p>{{ diepgang }}</p>
+                    <span>Diepgang</span>
+                </div>
+                {% endif %}
+
+                {% if gewicht %}
+                <div class="cs-kenmerk">
+                    <p>{{ gewicht }}</p>
+                    <span>Gewicht</span>
+                </div>
+                {% endif %}
+
+                {% if bouwjaar %}
+                <div class="cs-kenmerk">
+                    <p>{{ bouwjaar }}</p>
+                    <span>Bouwjaar</span>
+                </div>
+                {% endif %}
+
+                {% if vermogen %}
+                <div class="cs-kenmerk">
+                    <p>{{ vermogen }}</p>
+                    <span>Vermogen</span>
+                </div>
+                {% endif %}
+
+                {% if motorh %}
+                <div class="cs-kenmerk">
+                    <p>{{ motorh }}</p>
+                    <span>Motorh</span>
+                </div>
+                {% endif %}
+
+                {% if motor %}
+                <div class="cs-kenmerk">
+                    <p>{{ motor }}</p>
+                    <span>Motor</span>
+                </div>
+                {% endif %}
+
+                {% if drive %}
+                <div class="cs-kenmerk">
+                    <p>{{ drive }}</p>
+                    <span>Drive</span>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="cs-wrapper">
+            {{ content | safe }}
+        </div>
     </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-1446">
+    <div class="cs-container">
+        <div class="cs-gallery">
+            {% for item in galleryImages %}
+            <div class="cssbox cs-image">
+                <a id="image{{ loop.index }}" href="#image{{ loop.index }}"><img class="cssbox_thumb"
+                        src="{{ item.image }}" />
+                    <span class="cssbox_full"><img src="{{ item.image }}" /></span>
+                </a>
+
+                <a class="cssbox_close" href="#void"></a>
+                {% if loop.index > 1 %}
+                <a class="cssbox_prev" href="#image{{ loop.index - 1 }}">&lt;</a>
+                {% endif %}
+                {% if not loop.last %}
+                <a class="cssbox_next" href="#image{{ loop.index + 1 }}">&gt;</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include 'components/cta.html' %}
+
+
 {% endblock %}

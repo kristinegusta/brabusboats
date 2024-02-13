@@ -505,7 +505,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                border-radius: calc(10 / 16 * 1rem);
+                border-radius: 6px;
                 object-fit: cover;
             }
         }
@@ -514,7 +514,7 @@
             /* 204px - 326px & changes at desktop */
             width: clamp(12.75rem, 50vw, 20.375rem);
             height: clamp(12.75rem, 50vw, 20.375rem);
-            border-radius: calc(10 / 16 * 1rem);
+            border-radius: 6px;
             overflow: hidden;
             display: flex;
             justify-content: center;

@@ -50,6 +50,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 6px;
   }
   #services-1665 .cs-wrapper {
     display: flex;
@@ -253,6 +254,165 @@
   #services-1665 .cs-picture {
     height: 100%;
     min-height: 40rem;
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-74,
+  #RPsbsr-74 {
+    padding: var(--sectionPadding);
+  }
+  #RPsbs-74 .cs-container,
+  #RPsbsr-74 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #RPsbs-74 .cs-content,
+  #RPsbsr-74 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RPsbs-74 .cs-text,
+  #RPsbsr-74 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #RPsbs-74 .cs-text:last-of-type,
+  #RPsbsr-74 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RPsbs-74 .cs-button-solid,
+  #RPsbsr-74 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #RPsbs-74 .cs-button-solid:before,
+  #RPsbsr-74 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #RPsbs-74 .cs-button-solid:hover:before,
+  #RPsbsr-74 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RPsbs-74 .cs-picture,
+  #RPsbsr-74 .cs-picture {
+    width: 95%;
+    max-width: 34.375rem;
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 312/335;
+    border-radius: 6px;
+    z-index: 1;
+  }
+  #RPsbs-74 .cs-picture img,
+  #RPsbsr-74 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RPsbs-74 .cs-container,
+  #RPsbsr-74 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* 60px - 128px */
+    gap: clamp(3.75rem, 9.5vw, 8rem);
+  }
+  #RPsbs-74 .cs-picture,
+  #RPsbsr-74 .cs-picture {
+    /* 328px - 502px */
+    width: clamp(20.5rem, 37.5vw, 31.375rem);
+    /* 440px - 520px */
+    height: clamp(27.5rem, 40vw, 32.5rem);
+    /* 16px - 20px */
+    margin: 0 0 0 clamp(1rem, 5vw, 1.25rem);
+    flex: none;
+  }
+  #RPsbs-74 .cs-content,
+  #RPsbsr-74 .cs-content {
+    width: 45%;
+    margin: 0;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-74 {
+    background-color: #1a1a1a;
+  }
+  #RPsbsr-74 .cs-title,
+  #RPsbsr-74 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #RPsbsr-74 .cs-text {
+    opacity: 0.8;
+  }
+  #RPsbsr-74 .cs-picture:before, #RPsbsr-74 .cs-picture:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #RPsbsr-74 .cs-container {
+    justify-content: flex-end;
+  }
+  #RPsbsr-74 .cs-picture {
+    /* 16px - 20px */
+    margin-right: clamp(1rem, 5vw, 1.25rem);
+    /* forces it to the left */
+    order: 2;
   }
 }
 

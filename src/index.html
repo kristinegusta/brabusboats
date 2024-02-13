@@ -1,9 +1,9 @@
 ---
 title: 'Boten verkoop en service in Temse, Belgie'
 description: 'Gespecialiseerd in verkoop, onderhoud, winterberging, herstelling, wrapping van uw boot. '
-preloadImg: '/assets/images/landing.jpg'
+preloadImg: '/assets/images/hero.png'
 permalink: '/'
-    eleventyNavigation:
+eleventyNavigation:
     key: Home
     order: 100
 ---
@@ -109,7 +109,6 @@ permalink: '/'
                     src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136"
                     height="77" />
             </div>
-            <!-- <a class="cs-button-solid" aria-label="learn more about our programs" href="">Meer over ons</a> -->
         </div>
     </div>
 </section>
@@ -159,9 +158,9 @@ permalink: '/'
                         </picture>
                         <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
-                            <h3 class="cs-h3">Bootonderhoud, reparaties en diagnoses</h3>
+                            <h3 class="cs-h3">Bootonderhoud en diagnoses</h3>
                             <p class="cs-item-text">Voor speedboten voorzien wij in uitgebreid onderhoud, diagnoses en
-                                reparaties.</p>
+                                reparaties en ook onderhoud binnen/buitenboordmotoren.</p>
                         </div>
                     </a>
                 </li>
@@ -193,63 +192,31 @@ permalink: '/'
                         </div>
                     </a>
                 </li>
-                <!-- <li class="cs-item">
-                    <a href="" class="cs-link">
-                        <picture class="cs-picture">
-                            <img class="cs-icon" src="/assets/images/icons/aankop.svg" loading="lazy" decoding="async"
-                                alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Fibrafort boten</h3>
-                            <p class="cs-item-text">Uitgebreid assortiment voor de verkoop van
-                                speedboten, inclusief nieuwe Fibrafort-modellen en diverse tweedehands booten.
-                            </p>
-                        </div>
-                    </a>
-                </li> -->
-                <!-- <li class="cs-item">
-                    <a href="boten" class="cs-link">
-                        <picture class="cs-picture">
-                            <img class="cs-icon" src="/assets/images/icons/aankop.svg" loading="lazy" decoding="async"
-                                alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Verkoop tweedehands boten</h3>
-                            <p class="cs-item-text">Uitgebreid assortiment voor de verkoop van
-                                speedboten, inclusief nieuwe Fibrafort-modellen en diverse tweedehands booten.
-                            </p>
-                        </div>
-                    </a>
-                </li> -->
                 <li class="cs-item">
-                    <a href="winterstalling" class="cs-link">
+                    <a href="/aanbod" class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/images/icons/aankop.svg" loading="lazy" decoding="async"
+                                alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Aanbod</h3>
+                            <p class="cs-item-text">Uitgebreid assortiment voor de verkoop - boten, trailers, motoren.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="/winterstalling" class="cs-link">
                         <picture class="cs-picture">
                             <img class="cs-icon" src="/assets/images/icons/stalling.svg" loading="lazy" decoding="async"
                                 alt="icon" width="40" height="40" aria-hidden="true">
                         </picture>
-                        <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Winterstalling</h3>
                             <p class="cs-item-text">Voor een veilige winterstalling van speedboten bent u bij ons aan
                                 het juiste adres, met speciale stallingsvoorzieningen voor uw boot om uw vaartuig
                                 tijdens het winterseizoen in optimale conditie te houden.
                             </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="cs-item">
-                    <a href="" class="cs-link">
-                        <picture class="cs-picture">
-                            <img class="cs-icon" src="/assets/images/icons/engine.svg" loading="lazy" decoding="async"
-                                alt="icon" width="40" height="40" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Verkoop en onderhoud binnen/buitenboordmotoren</h3>
-                            <p class="cs-item-text">Ruim aanbod aan zowel binnen- als
-                                buitenboordmotoren te koop, inclusief re-powering services om uw vaartuig van de
-                                nieuwste krachtbronnen te voorzien.</p>
                         </div>
                     </a>
                 </li>
@@ -298,24 +265,30 @@ permalink: '/'
         <ul class="cs-card-group">
             <div class="cs-group">
                 <a href="blog" class="cs-button-solid">Nieuwe Fibrafort boten te koop</a>
+                {% set found = false %}
+                {%- for post in collections.post | reverse -%}
+                {% if "fibrafort" in post.data.tags and not found %}
                 <li class="cs-item">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/keyby_in_boat.JPG">
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/keyby_in_boat.JPG">
-                        <img loading="lazy" decoding="async" src="/assets/images/keyby_in_boat.JPG" alt="stylist"
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}"
                             width="413" height="480">
                     </picture>
                     <div class="cs-info">
-                        <h3 class="cs-h3">NIEUWE Fibrafort 212</h3>
-                        <span class="cs-available">€ 49 950 excl btw </span>
+                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                        <span class="cs-available">{{ post.data.price }}</span>
                         <span class="cs-desc">
-                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                            {{ post.data.description }}
                         </span>
-                        <a href="" class="cs-link">Ondek meer</a>
+                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
                     </div>
                 </li>
+                {% set found = true %}
+                {% endif %}
+                {%- endfor -%}
             </div>
             <div class="cs-group">
                 <a href="blog" class="cs-button-solid">Tweedehands boten te koop</a>

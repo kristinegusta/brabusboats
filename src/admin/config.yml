@@ -10,6 +10,55 @@ media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"
 
 collections:
+  - name: "fibrafort_boten"
+    label: "Fibrafort boten"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["fibrafort"] }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - {
+          label: "Gallery",
+          name: "galleryImages",
+          widget: "list",
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: "Label", name: "label", widget: "string" },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Merk", name: "merk", widget: "string", required: false }
+      - { label: "Model", name: "model", widget: "string", required: false }
+      - { label: "Lengte", name: "lengte", widget: "string", required: false }
+      - { label: "Breedte", name: "breedte", widget: "string", required: false }
+      - {
+          label: "Diepgang",
+          name: "diepgang",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Gewicht", name: "gewicht", widget: "string", required: false }
+      - {
+          label: "Bouwjaar",
+          name: "bouwjaar",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Vermogen",
+          name: "vermogen",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Motorh", name: "motorh", widget: "string", required: false }
+      - { label: "Motor", name: "motor", widget: "string", required: false }
+      - { label: "Drive", name: "drive", widget: "string", required: false }
   - name: "tweedehands_boten"
     label: "Tweedehands boten"
     folder: "src/content/blog"

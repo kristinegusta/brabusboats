@@ -1,5 +1,5 @@
 ---
-title: Malibu Wakesetter VLX 22 – Monsoon 350HP - 2015
+title: "Malibu Wakesetter VLX 22 – Monsoon 350HP "
 description: Deze prachtige wake/skiboot is CE gekeurd en heeft alle nodige
   documenten. Deze boot wordt verkocht in opdracht van een klant ( dus overname
   niet mogelijk). Boot heeft in najaar een groot onderhoud gekregen en staat

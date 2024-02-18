@@ -16,6 +16,8 @@ galleryImages:
     label: fibra2
   - image: /assets/images/blog/screenshot-2024-02-13-at-13-01-46-new-fibrafort-212-–-140hp-tohatsu.png
     label: fibra3
+  - image: /assets/images/blog/img-20231226-wa0028.jpg
+    label: boat3
 lengte: 673cm
 breedte: 232cm
 diepgang: 0.52cm

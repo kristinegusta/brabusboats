@@ -38,70 +38,39 @@ eleventyNavigation:
                     vandaag
                     nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
             </div>
-            <a href="" class="cs-button-solid">Bekijk alles</a>
+            <a href="/tweedehands" class="cs-button-solid">Bekijk alles</a>
         </div>
         <ul class="cs-card-group">
+
+            {%- for post in collections.post | reverse -%}
+            {% if "tweedehands" in post.data.tags %}
             <div class="cs-group">
                 <li class="cs-item">
                     <picture class="cs-picture sold">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
-                            alt="stylist" width="413" height="480">
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
                     </picture>
                     <div class="cs-info">
-                        <h3 class="cs-h3">Boat trailer </h3>
-                        <!-- <span class="cs-available">€ 9 950 excl btw </span> -->
+                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                        {% if post.data.status %}
+                        <span class="cs-available">€ {{ post.data.price }}</span>
+                        {% else %}
                         <span class="cs-sold">Verkocht</span>
+                        {% endif %}
                         <span class="cs-desc">
-                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                            {{ post.data.description }}
                         </span>
-                        <a href="" class="cs-link">Ondek meer</a>
+                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
                     </div>
                 </li>
             </div>
-            <div class="cs-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
-                            alt="stylist" width="413" height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">Boat trailer </h3>
-                        <span class="cs-available">€ 9 950 excl btw </span>
-                        <span class="cs-desc">
-                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
-                        </span>
-                        <a href="" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
-            </div>
-            <div class="cs-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
-                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer2.jpeg"
-                            alt="stylist" width="413" height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">New trailer</h3>
-                        <span class="cs-available">€ 9 000</span>
-                        <span class="cs-desc">
-                            Deze prachtige bowrider boot is CE gekeurd en heeft alle nodige papieren.
-                        </span>
-                        <a href="" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
-            </div>
+
+            {% endif %}
+            {%- endfor -%}
 
         </ul>
     </div>
@@ -109,7 +78,7 @@ eleventyNavigation:
 
 <section id="fibrafort">
     <div class="cs-container">
-        {% set found = false %}
+        {% set foundFibra = false %}
         {%- for post in collections.post | reverse -%}
         {% if "fibrafort" in post.data.tags and not found %}
         <div class="cs-content">
@@ -142,7 +111,7 @@ eleventyNavigation:
                 </li>
             </div>
         </ul>
-        {% set found = true %}
+        {% set foundFibra = true %}
         {% endif %}
         {%- endfor -%}
     </div>
@@ -239,7 +208,8 @@ eleventyNavigation:
         <picture class="cs-picture">
             <source media="(max-width: 600px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
             <source media="(min-width: 601px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
-            <img loading="lazy" decoding="async" src="/assets/images/banner/tohatsu-logo-white.png" alt="Buitenboordmotoren" width="500" height="552" aria-hidden="true">
+            <img loading="lazy" decoding="async" src="/assets/images/banner/tohatsu-logo-white.png"
+                alt="Buitenboordmotoren" width="500" height="552" aria-hidden="true">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">Buitenboordmotoren</span>

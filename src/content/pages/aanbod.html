@@ -11,26 +11,252 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/aanbod.css">
+<link rel="stylesheet" href="/assets/css/aanbod.css">
 {% endblock %}
 
 {% block body %}
 
-    <section id="int-hero">
-        <h1 id="home-h">Aanbod</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/keyby_in_boat.JPG">
-            <source media="(min-width: 601px)" srcset="/assets/images/keyby_in_boat.JPG">
-            <img aria-hidden="true" decoding="async" src="/assets/images/keyby_in_boat.JPG" alt="Fibrafort" loading="eager" width="2500" height="1667">
+<section id="int-hero">
+    <h1 id="home-h">Aanbod</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/keyby_in_boat.JPG">
+        <source media="(min-width: 601px)" srcset="/assets/images/keyby_in_boat.JPG">
+        <img aria-hidden="true" decoding="async" src="/assets/images/keyby_in_boat.JPG" alt="Fibrafort" loading="eager"
+            width="2500" height="1667">
+    </picture>
+</section>
+
+<section id="blog-986">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Aanbod boten</span>
+                <h2 class="cs-title">Verkoop tweedehands boten</h2>
+                <p>Brabus Boats staat paraat om u te adviseren en de ideale boottrailer te vinden die perfect aansluit
+                    op
+                    uw behoeften. Kies voor betrouwbaarheid en vakmanschap in elke trailer die wij aanbieden. Neem
+                    vandaag
+                    nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
+            </div>
+            <a href="" class="cs-button-solid">Bekijk alles</a>
+        </div>
+        <ul class="cs-card-group">
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture sold">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">Boat trailer </h3>
+                        <!-- <span class="cs-available">€ 9 950 excl btw </span> -->
+                        <span class="cs-sold">Verkocht</span>
+                        <span class="cs-desc">
+                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">Boat trailer </h3>
+                        <span class="cs-available">€ 9 950 excl btw </span>
+                        <span class="cs-desc">
+                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer2.jpeg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">New trailer</h3>
+                        <span class="cs-available">€ 9 000</span>
+                        <span class="cs-desc">
+                            Deze prachtige bowrider boot is CE gekeurd en heeft alle nodige papieren.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+
+        </ul>
+    </div>
+</section>
+
+<section id="fibrafort">
+    <div class="cs-container">
+        {% set found = false %}
+        {%- for post in collections.post | reverse -%}
+        {% if "fibrafort" in post.data.tags and not found %}
+        <div class="cs-content">
+            <div class="cs-flex">
+                <!-- <span class="cs-topper">Te koop</span> -->
+                <h2 class="cs-title">NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor</h2>
+                <a href="/fibrafort" class="cs-button-solid">Bekijk alles over Fibrafort</a>
+            </div>
+
+        </div>
+        <ul class="cs-card-group">
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                        <span class="cs-available">{{ post.data.price }}</span>
+                        <span class="cs-desc">
+                            {{ post.data.description }}
+                        </span>
+                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        {% set found = true %}
+        {% endif %}
+        {%- endfor -%}
+    </div>
+</section>
+
+
+<section id="blog-986">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Aanbod</span>
+                <h2 class="cs-title">Verkoop tweedehands trailers</h2>
+                <p>Brabus Boats staat paraat om u te adviseren en de ideale boottrailer te vinden die perfect aansluit
+                    op
+                    uw behoeften. Kies voor betrouwbaarheid en vakmanschap in elke trailer die wij aanbieden. Neem
+                    vandaag
+                    nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
+            </div>
+            <a href="" class="cs-button-solid">Bekijk alles</a>
+        </div>
+        <ul class="cs-card-group">
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture sold">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">Boat trailer </h3>
+                        <!-- <span class="cs-available">€ 9 950 excl btw </span> -->
+                        <span class="cs-sold">Verkocht</span>
+                        <span class="cs-desc">
+                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer.jpg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">Boat trailer </h3>
+                        <span class="cs-available">€ 9 950 excl btw </span>
+                        <span class="cs-desc">
+                            NIEUWE Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+            <div class="cs-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/pages/trailer/trailer2.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/pages/trailer/trailer2.jpeg"
+                            alt="stylist" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <h3 class="cs-h3">New trailer</h3>
+                        <span class="cs-available">€ 9 000</span>
+                        <span class="cs-desc">
+                            Deze prachtige bowrider boot is CE gekeurd en heeft alle nodige papieren.
+                        </span>
+                        <a href="" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-74">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
+            <source media="(min-width: 601px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
+            <img loading="lazy" decoding="async" src="/assets/images/banner/tohatsu-logo-white.png" alt="Buitenboordmotoren" width="500" height="552" aria-hidden="true">
         </picture>
-    </section>
+        <div class="cs-content">
+            <span class="cs-topper">Buitenboordmotoren</span>
+            <h2 class="cs-title">NIEUWE buitenboordmotoren Tohatsu</h2>
+            <p class="cs-text">
+                Wij zijn een officiële verdeler van het Merk Tohatsu voor België. Alle motoren van 2.5pk tot 140pk
+                met de nodige instrumenten kunnen wij verkrijgen via de europese importeur.
+            </p>
+            <a href="/fibrafort" class="cs-button-solid">Bekijk alles over Tohatsu motoren</a>
+        </div>
+    </div>
+</section>
 
 
-
-    <div class="blog-container main-content-wrapper">
-        <!--Main content -->
+<!-- <div class="blog-container main-content-wrapper">
         <div class="main-content">
-
+            <h2>Tweedehands boten</h2>
             {% if collections.post | length == 0 %}
                 <h1>No Recent Posts</h1>
             {% else %}
@@ -48,7 +274,7 @@ eleventyNavigation:
                  
                         <div class="article-group">
                             <div class="blog-authorGroup">
-                                <!--Author Image-->
+                       
                                 <picture class="blog-author-img">
                                     <img
                                     src="/assets/svgs/profile.svg"
@@ -59,7 +285,7 @@ eleventyNavigation:
                                 </picture>
                                 <span class="blog-author">{{ post.data.author }}</span>
                                 <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
+                             
                                 <span class="blog-date">{{ post.date | postDate }}</span>
                             </div>
                             <h2 class="blog-h1">
@@ -75,6 +301,5 @@ eleventyNavigation:
             {% endif %}
         </div>
 
-        {% include 'components/featured-post.html' %}
-    </div>
+    </div> -->
 {% endblock %}

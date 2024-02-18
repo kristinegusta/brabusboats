@@ -6,6 +6,17 @@
   #video-548 {
     padding: var(--sectionPadding);
   }
+  #video-548 li {
+    color: var(--bodyTextColor);
+  }
+  #video-548 .caption {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  #video-548 .caption span {
+    color: var(--primary);
+  }
   #video-548 .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -84,6 +95,12 @@
   #video-548 .cs-link-icon:hover {
     transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
+  }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+  #video-548 .cs-container {
+    flex-direction: row;
   }
 }
 

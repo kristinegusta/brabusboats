@@ -5,6 +5,7 @@ description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
   tijdsloze nardo grey kleur. "
 tags:
   - fibrafort
+status: true
 price: "€49950 excl btw "
 image: /assets/images/blog/fibrafort.jpeg
 imageAlt: Fibrafort

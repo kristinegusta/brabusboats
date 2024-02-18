@@ -7,6 +7,22 @@
     #video-548 {
         padding: var(--sectionPadding);
 
+        li {
+            color: var(--bodyTextColor);
+        }
+
+
+        .caption {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+
+            span {
+                color: var(--primary);
+            }
+        }
+
+
         .cs-container {
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
@@ -100,5 +116,12 @@
                 box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
             }
         }
+    }
+}
+
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+    #video-548 .cs-container {
+        flex-direction: row;
     }
 }

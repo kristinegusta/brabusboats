@@ -53,21 +53,15 @@ eleventyNavigation:
                     alt="people outside" width="254" height="262">
             </picture>
             <picture class="cs-picture">
-                <source media="(max-width: 600px)"
-                    srcset="/assets/images/pages/fibrafort/fibrafort1.jpg">
-                <source media="(min-width: 601px)"
-                    srcset="/assets/images/pages/fibrafort/fibrafort1.jpg">
-                <img loading="lazy" decoding="async"
-                    src="/assets/images/pages/fibrafort/fibrafort1.jpg" alt="person gardening"
-                    width="254" height="262">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/fibrafort/fibrafort1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/fibrafort/fibrafort1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/fibrafort/fibrafort1.jpg"
+                    alt="person gardening" width="254" height="262">
             </picture>
             <picture class="cs-picture">
-                <source media="(max-width: 600px)"
-                    srcset="/assets/images/pages/fibrafort/fibrafort2.jpg">
-                <source media="(min-width: 601px)"
-                    srcset="/assets/images/pages/fibrafort/fibrafort2.jpg">
-                <img loading="lazy" decoding="async"
-                    src="/assets/images/pages/fibrafort/fibrafort2.jpg"
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/fibrafort/fibrafort2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/fibrafort/fibrafort2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/fibrafort/fibrafort2.jpg"
                     alt="urban environment in green" width="254" height="262">
             </picture>
         </div>
@@ -94,8 +88,12 @@ eleventyNavigation:
     </div>
 </section>
 
+
 <section id="blog-986">
     <div class="cs-container">
+        {% set found = false %}
+        {%- for post in collections.post | reverse -%}
+        {% if "fibrafort" in post.data.tags and not found %}
         <div class="cs-content">
             <div class="cs-flex">
                 <span class="cs-topper">Te koop</span>
@@ -107,23 +105,26 @@ eleventyNavigation:
                 <li class="cs-item">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/pages/fibrafort/tekoop.jpg">
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/pages/fibrafort/tekoop.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/pages/fibrafort/tekoop.jpg"
-                            alt="stylist" width="413" height="480">
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
                     </picture>
                     <div class="cs-info">
-                        <h3 class="cs-h3">Fibrafort 212 </h3>
-                        <span class="cs-available">€ 49 950 excl btw </span>
+                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                        <span class="cs-available">{{ post.data.price }}</span>
                         <span class="cs-desc">
-                            Deze boot wordt afgeleverd met een volledig nieuw dekzeil. 
+                            {{ post.data.description }}
                         </span>
-                        <a href="" class="cs-link">Ondek meer</a>
+                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
                     </div>
                 </li>
             </div>
         </ul>
+        {% set found = true %}
+        {% endif %}
+        {%- endfor -%}
     </div>
 </section>
 

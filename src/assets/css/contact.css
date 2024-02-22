@@ -14,7 +14,6 @@
     --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
   }
   #cs-contact {
-    font-family: "Roboto", "Arial", sans-serif;
     padding: var(--sectionPadding);
   }
   #cs-contact .cs-container {
@@ -74,6 +73,7 @@
     border: 1px solid #b4b2c7;
     border-radius: 0.5rem;
     transition: border 0.3s;
+    font-family: inherit;
   }
   #cs-contact #cs-form input:hover,
   #cs-contact #cs-form textarea:hover {
@@ -103,13 +103,13 @@
     overflow: hidden;
   }
   #cs-contact .cs-header {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
     line-height: 1.2em;
     margin-bottom: 0.5rem;
     color: var(--bodyTextColorWhite);
     display: block;
+    font-family: "Montserrat", Arial, sans-serif;
+    text-transform: uppercase;
   }
   #cs-contact .cs-link {
     /* 16px - 20px */

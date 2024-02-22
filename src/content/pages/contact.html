@@ -38,52 +38,48 @@ eleventyNavigation:
     <div class="cs-container">
         <form id="cs-form" name="Contact Form" method="post" netlify>
             <div class="cs-content">
-                <span class="cs-topper">Contact</span>
-                <h2 class="cs-title">Neem contact op</h2>
+                <span class="cs-topper">Contactformulier</span>
                 <p class="cs-text">
                     Onze contactgegevens vind u hier onder. Voor een vraag of meer informatie mag je die ons altijd
                     stellen. Wij beantwoorden u vraag binnen de 24 uur
                 </p>
             </div>
             <label>
-                Name
-                <input required type="text" id="name" name="name" placeholder="Name">
+                Naam
+                <input required type="text" id="name" name="name" placeholder="Uw naam">
             </label>
             <label>
                 Email
-                <input required type="text" id="email" name="email" placeholder="Email">
+                <input required type="text" id="email" name="email" placeholder="Uw e-mailadres">
             </label>
             <label>
-                Phone
-                <input required type="text" id="phone" name="phone" placeholder="Phone">
+                Telefoonnummer
+                <input required type="text" id="phone" name="phone" placeholder="Uw telefoonnummer">
             </label>
             <label>
-                Subject
-                <input required type="text" id="subject" name="subject" placeholder="Subject">
+                Onderwerp
+                <input required type="text" id="subject" name="subject" placeholder="Onderwerp">
             </label>
             <label class="cs-label-message">
-                Message
-                <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
+                Bericht
+                <textarea required name="Message" id="message" placeholder="Uw bericht..."></textarea>
             </label>
-            <button class="cs-button-solid" type="submit">Submit Message</button>
+            <button class="cs-button-solid" type="submit">Verstuur</button>
         </form>
         <div class="cs-right-section">
             <!--Email-->
             <span class="cs-header">Email</span>
             <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
             <!--Phone-->
-            <span class="cs-header">Phone</span>
+            <span class="cs-header">Telefoonnummer</span>
             <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
             <!--Address-->
-            <span class="cs-header">Address</span>
+            <span class="cs-header">Adres</span>
             <a class="cs-link" href="{{client.address.mapLink}}">
                 {{client.address.lineOne}},
                 <br />
-                {{client.address.lineTwo}},
-                <br />
                 <span class="cs-block">
                     {{client.address.city}}
-                    {{client.address.state}}
                     {{client.address.zip}}
                 </span>
             </a>

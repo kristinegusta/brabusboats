@@ -1,6 +1,6 @@
 ---
 title: 'Verkoop van boten, motoren en trailers'
-description: 'Meta description for the page'
+description: 'Aanbod van nieuwe Fibrafort boten en Tohatsu motoren, tweedehands boten en inclusief trailers'
 preloadImg: '/assets/images/keyby_in_boat.JPG'
 permalink: 'aanbod/'
 eleventyNavigation:
@@ -46,6 +46,16 @@ eleventyNavigation:
             {% if "tweedehands" in post.data.tags %}
             <div class="cs-group">
                 <li class="cs-item">
+                    {% if post.data.status %}
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
+                    </picture>
+                    {% else %}
                     <picture class="cs-picture sold">
                         <!--Mobile Image-->
                         <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
@@ -54,6 +64,8 @@ eleventyNavigation:
                         <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
                             height="480">
                     </picture>
+                    {% endif %}
+
                     <div class="cs-info">
                         <h3 class="cs-h3">{{ post.data.title }}</h3>
                         {% if post.data.status %}
@@ -61,9 +73,6 @@ eleventyNavigation:
                         {% else %}
                         <span class="cs-sold">Verkocht</span>
                         {% endif %}
-                        <span class="cs-desc">
-                            {{ post.data.description }}
-                        </span>
                         <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
                     </div>
                 </li>

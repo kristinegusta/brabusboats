@@ -356,6 +356,7 @@
   }
   #hero-227 .cs-subtitle {
     font-size: clamp(1.338rem, 1vw, 1.5125rem);
+    text-align: center;
   }
   #hero-227 .cs-button-solid {
     margin-bottom: 0;

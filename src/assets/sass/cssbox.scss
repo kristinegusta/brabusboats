@@ -22,7 +22,7 @@ span.cssbox_full {
 
 span.cssbox_full img {
   position: fixed;
-  background-color: white;
+  background-color: transparent;
   margin: 0;
   padding: 0;
   max-height: 80%;
@@ -31,7 +31,6 @@ span.cssbox_full img {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 20px black;
 }
 
 a.cssbox_close,

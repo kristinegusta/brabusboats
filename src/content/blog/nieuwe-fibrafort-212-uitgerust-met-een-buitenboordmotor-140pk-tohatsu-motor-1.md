@@ -1,5 +1,5 @@
 ---
-title: "NIEUWE Fibrafort 212 "
+title: "New Fibrafort 212 - 140hp Tohatsu "
 description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
   volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie
   tijdsloze nardo grey kleur. "
@@ -7,17 +7,35 @@ tags:
   - fibrafort
 status: true
 price: "€49950 excl btw "
-image: /assets/images/blog/fibrafort.jpeg
+image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:
-  - image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
-    label: fibra1
-  - image: /assets/images/blog/screenshot-2024-02-13-at-13-01-35-new-fibrafort-212-–-140hp-tohatsu.png
-    label: fibra2
-  - image: /assets/images/blog/screenshot-2024-02-13-at-13-01-46-new-fibrafort-212-–-140hp-tohatsu.png
-    label: fibra3
-  - image: /assets/images/blog/img-20231226-wa0028.jpg
-    label: boat3
+  - image: /assets/images/blog/fibrafort-212-neus.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2270.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2275.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2280.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2282.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2283.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2294.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2310.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2332.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2335.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2367.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2372.jpg
+    label: Fibrafort 212
+  - image: /assets/images/blog/img_2401.jpg
+    label: Fibrafort 212
 lengte: 673cm
 breedte: 232cm
 diepgang: 0.52cm
@@ -51,7 +69,3 @@ Deze nieuwe Fibrafort 212 is voorzien alle volgende optie’s:
 * extra speakers
 * extra opbergruimte (inbouwkast)
 * Elektrische frigobox
-
-Wij geven op onze eerste 3 fibraforts 212 een extra korting. Voor meer info contacteer ons. 
-
-Er komen nog 2 zwarte 212 aan die geleverd kunnen worden in augustus.

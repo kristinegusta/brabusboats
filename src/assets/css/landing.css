@@ -592,16 +592,25 @@
     font-weight: 700;
     margin-bottom: 12px;
   }
+  #blog-986 .cs-link-icon {
+    position: absolute;
+    right: 1rem;
+  }
   #blog-986 .cs-available {
     font-size: 12px;
     background-color: var(--secondary);
     border-radius: 8px;
-    padding: 0px 12px;
-    text-transform: uppercase;
+    padding: 6px 12px;
     letter-spacing: 1px;
     color: white;
     font-weight: 700;
     margin-bottom: 12px;
+    margin-right: 6px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  #blog-986 .cs-available i {
+    margin-right: 4px;
   }
   #blog-986 .cs-button-solid {
     font-size: 0.85em;
@@ -696,7 +705,7 @@
     height: 100%;
     object-fit: cover;
     /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
-    object-position: top;
+    object-position: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -704,8 +713,7 @@
     transition: transform 0.9s;
   }
   #blog-986 .cs-info {
-    width: 83%;
-    max-width: 26.25rem;
+    width: 100%;
     /* 16px - 24px */
     padding: clamp(1rem, 2vw, 1.5rem);
     /* prevents padding from affecting the height and width */
@@ -778,19 +786,6 @@
   }
   #blog-986 .cs-link:hover {
     color: #fff;
-  }
-  #blog-986 .cs-link:before {
-    /* underline */
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    opacity: 1;
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    transition: background-color 0.3s;
   }
 }
 /* Tablet - 550px */

@@ -4,8 +4,8 @@ description: 'Gespecialiseerd in verkoop, onderhoud, winterberging, herstelling,
 preloadImg: '/assets/images/hero.png'
 permalink: '/'
 eleventyNavigation:
-    key: Home
-    order: 100
+key: Home
+order: 100
 ---
 
 {% extends "layouts/base.html" %}
@@ -265,49 +265,70 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <div class="cs-group">
                 <a href="/fibrafort" class="cs-button-solid">Nieuwe Fibrafort boten te koop</a>
-                {% set found = false %}
-                {%- for post in collections.post | reverse -%}
-                {% if "fibrafort" in post.data.tags and not found %}
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}"
-                            width="413" height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">{{ post.data.title }}</h3>
-                        <div>
-                            <span class="cs-available">{{ post.data.price }}</span>
-                            <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
+                {%- set newHand = collections.fibrafort | first -%}
+                <a href="{{ post.url }}">
+                    <li class="cs-item">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ newHand.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ newHand.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ newHand.data.image }}"
+                                alt="{{ newHand.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <h3 class="cs-h3">{{ newHand.data.title }}</h3>
+                            <picture class="cs-link-icon">
+                                <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                    alt="link icon" width="22" height="22">
+                            </picture>
+                            <div>
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ newHand.data.price }}
+                                </span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>
+                                    {{ newHand.data.bouwjaar }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-anchor"></i>
+                                    {{ newHand.data.drive }}</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                {% set found = true %}
-                {% endif %}
-                {%- endfor -%}
+                    </li>
+                </a>
             </div>
             <div class="cs-group">
                 <a href="blog" class="cs-button-solid">Tweedehands boten te koop</a>
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/Regal.png">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/Regal.png">
-                        <img loading="lazy" decoding="async" src="/assets/images/Regal.png" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">Sea Ray SPX 19 -150pk mercury </h3>
-                        <span class="cs-available">€ 29 000</span>
-                        <a href="" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
-            </div>
 
+                {%- set secondHand = collections.tweedehands | first -%}
+                <a href="{{ lastSecondHand.url }}">
+                    <li class="cs-item">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ secondHand.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ secondHand.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ secondHand.data.image }}"
+                                alt="{{ secondHand.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <h3 class="cs-h3">{{ secondHand.data.title }}</h3>
+                            <picture class="cs-link-icon">
+                                <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                    alt="link icon" width="22" height="22">
+                            </picture>
+                            <div>
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>{{ secondHand.data.price
+                                    }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
+                                    secondHand.data.bouwjaar }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-anchor"></i>
+                                    {{ secondHand.data.drive }}</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            </div>
         </ul>
     </div>
 </section>

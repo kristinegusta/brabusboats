@@ -6,7 +6,7 @@ description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
 tags:
   - fibrafort
 status: true
-price: "€49950 excl btw "
+price: "49 950 excl btw "
 image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:

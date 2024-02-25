@@ -7,7 +7,7 @@ description: Deze prachtige wake/skiboot is CE gekeurd en heeft alle nodige
 tags:
   - tweedehands
 status: true
-price: €66.000 excl btw
+price: 66 000 excl btw
 image: /assets/images/blog/screenshot-2024-02-18-at-16-19-30-2bb67f80-1a04-40b6-9f06-49401c7e2f62-avif-image-498-×-664-pixels-.png
 imageAlt: Malibu
 galleryImages:

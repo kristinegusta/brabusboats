@@ -456,6 +456,7 @@ html {
             display: flex;
             justify-content: flex-end;
             align-items: center;
+
         }
 
 
@@ -947,6 +948,19 @@ html {
         transition: background-color 0.5s ease;
         background-color: transparent;
 
+        .socials {
+            a {
+                color: var(--primary);
+                font-size: 1rem;
+                text-decoration: none;
+                transition: 0.5s all ease;
+
+                &:hover {
+                    color: var(--primaryLight);
+                }
+            }
+        }
+
         &:after {
             /* on scroll overlay */
             content: "";
@@ -1384,6 +1398,19 @@ html {
             }
         }
 
+        .socials {
+            a {
+                color: var(--primary);
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: 0.5s all ease;
+
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+
         .right-section {
             width: 96%;
             max-width: calc(407 / 16 * 1rem);
@@ -1399,11 +1426,10 @@ html {
 
                 ul {
                     margin-top: 0;
-                    margin-bottom: 0;
+                    margin-bottom: 2rem;
                     padding: 0;
 
                     &:nth-of-type(3) {
-                        margin-top: calc(50 / 16 * 1rem);
 
                         li {
                             margin-bottom: calc(16 / 16 * 1rem);
@@ -1479,18 +1505,8 @@ html {
             text-align: center;
             width: 96%;
             margin: auto;
-            margin-top: calc(100 / 16 * 1rem);
+            margin-top: calc(80 / 16 * 1rem);
             color: #fff;
-
-            a {
-                font-size: calc(16 / 16 * 1rem);
-                text-decoration: none;
-                color: var(--primary);
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
 
             .copyright {
                 font-size: calc(16 / 16 * 1rem);

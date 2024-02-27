@@ -361,6 +361,22 @@ html {
     transform: translateY(0);
     opacity: 1;
   }
+  #cs-navigation .cs-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-navigation .socials a {
+    color: var(--primary);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.5s all ease;
+    margin-left: 6px;
+  }
+  #cs-navigation .socials a:hover {
+    color: var(--primaryLight);
+  }
   #cs-navigation .cs-container {
     width: 100%;
     padding: 1rem;
@@ -754,6 +770,7 @@ html {
     font-size: 1rem;
     text-decoration: none;
     transition: 0.5s all ease;
+    margin-left: 0.5rem;
   }
   #cs-navigation .socials a:hover {
     color: var(--primaryLight);
@@ -1140,7 +1157,7 @@ html {
   }
   #footer .socials a {
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: 0.5s all ease;
   }

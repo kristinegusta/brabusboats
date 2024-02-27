@@ -4,8 +4,8 @@ description: 'Gespecialiseerd in verkoop, onderhoud, winterberging, herstelling,
 preloadImg: '/assets/images/hero.png'
 permalink: '/'
 eleventyNavigation:
-key: Home
-order: 100
+    key: Home
+    order: 100
 ---
 
 {% extends "layouts/base.html" %}
@@ -81,7 +81,7 @@ order: 100
         <!-- Right Content Section-->
         <div class="cs-content">
             <span class="cs-topper">Ons verhaal</span>
-            <h2 class="cs-title">Brabus Boats</h2>
+            <h2 class="cs-title">Brabusboats</h2>
             <p class="cs-text">
                 Niet altijd heb ik gewerkt aan boten , eerder heb ik gewerkt in andere sectoren. Maar de
                 vrijetijd ging altijd naar het opzoeken en werken aan speedboten. Toen ik nog jong was
@@ -99,7 +99,7 @@ order: 100
             </p>
             <div class="cs-flex-group">
                 <p class="cs-flex-p">
-                    <span>Waarom kiezen voor Brabus Boats?</span>
+                    <span>Waarom kiezen voor Brabusboats?</span>
                     Tijdens de werken proberen we onze klanten veel mee te betrekken in het proces. Dit om
                     ervoor te zorgen dat de klant weet waar hij voor betaald en wat er effectief gebeurd.
                 </p>
@@ -186,7 +186,7 @@ order: 100
                         </picture>
                         <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
-                            <h3 class="cs-h3">Verkoop en onderhoud trailers</h3>
+                            <h3 class="cs-h3">Onderhoud en verkoop boottrailers</h3>
                             <p class="cs-item-text">Wij verzorgen zowel de verkoop als het onderhoud van trailers, zodat
                                 u zorgeloos en veilig met uw vaartuig de weg op kunt.</p>
                         </div>
@@ -266,7 +266,7 @@ order: 100
             <div class="cs-group">
                 <a href="/fibrafort" class="cs-button-solid">Nieuwe Fibrafort boten te koop</a>
                 {%- set newHand = collections.fibrafort | first -%}
-                <a href="{{ post.url }}">
+                <a href="{{ newHand.url }}">
                     <li class="cs-item">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
@@ -300,7 +300,7 @@ order: 100
                 <a href="blog" class="cs-button-solid">Tweedehands boten te koop</a>
 
                 {%- set secondHand = collections.tweedehands | first -%}
-                <a href="{{ lastSecondHand.url }}">
+                <a href="{{ secondHand.url }}">
                     <li class="cs-item">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
@@ -324,6 +324,7 @@ order: 100
                                     secondHand.data.bouwjaar }}</span>
                                 <span class="cs-available"><i class="fa-solid fa-anchor"></i>
                                     {{ secondHand.data.drive }}</span>
+
                             </div>
                         </div>
                     </li>

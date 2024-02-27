@@ -184,7 +184,7 @@
                 height: 100%;
                 object-fit: cover;
                 /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
-                object-position: top;
+                object-position: center;
                 position: absolute;
                 top: 0;
                 left: 0;

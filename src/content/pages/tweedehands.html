@@ -1,0 +1,84 @@
+---
+title: 'Verkoop tweedehands boten'
+description: 'Aanbod van nieuwe Fibrafort boten en Tohatsu motoren, tweedehands boten en inclusief trailers'
+preloadImg: '/assets/images/keyby_in_boat.JPG'
+permalink: 'tweedehands-boten/'
+eleventyNavigation:
+    key: Tweedehands boten
+    parent: Aanbod
+    order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/aanbod.css">
+{% endblock %}
+
+{% block body %}
+
+<section id="int-hero">
+    <h1 id="home-h">Vind hier uw nieuwe boot </h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/keyby_in_boat.JPG">
+        <source media="(min-width: 601px)" srcset="/assets/images/keyby_in_boat.JPG">
+        <img aria-hidden="true" decoding="async" src="/assets/images/keyby_in_boat.JPG" alt="Fibrafort" loading="eager"
+            width="2500" height="1667">
+    </picture>
+</section>
+
+<section id="blog-986">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Aanbod boten</span>
+                <h2 class="cs-title">Verkoop tweedehands boten</h2>
+                <p>Brabus Boats staat paraat om u te adviseren en de ideale boottrailer te vinden die perfect aansluit
+                    op
+                    uw behoeften. Kies voor betrouwbaarheid en vakmanschap in elke trailer die wij aanbieden. Neem
+                    vandaag
+                    nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            {%- for post in collections.tweedehands | reverse -%}
+            <div class="cs-group">
+                <li class="cs-item">
+                    {% if post.data.status %}
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
+                    </picture>
+                    {% else %}
+                    <picture class="cs-picture sold">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
+                            height="480">
+                    </picture>
+                    {% endif %}
+
+                    <div class="cs-info">
+                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                        {% if post.data.status %}
+                        <span class="cs-available">€ {{ post.data.price }}</span>
+                        {% else %}
+                        <span class="cs-sold">Verkocht</span>
+                        {% endif %}
+                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
+                    </div>
+                </li>
+            </div>
+            {%- endfor -%}
+
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

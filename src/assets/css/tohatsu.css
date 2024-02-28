@@ -6,11 +6,6 @@
   #sbsr-88 {
     padding: var(--sectionPadding);
   }
-  #sbsr-88 span {
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 1rem;
-  }
   #sbsr-88 li {
     margin-left: 2rem;
   }
@@ -34,9 +29,6 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
-  }
-  #sbsr-88 .cs-topper {
-    color: var(--primaryLight);
   }
   #sbsr-88 .cs-title {
     max-width: 20ch;

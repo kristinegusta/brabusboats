@@ -1,7 +1,7 @@
 ---
 title: 'Nieuwe Fibrafort boten'
 description: 'Nieuwe Fibrafort boten te koop'
-preloadImg: '/assets/images/cabinets2.jpg'
+preloadImg: '/assets/images/pages/fibrafort/fibrafort.png'
 permalink: 'fibrafort/'
 eleventyNavigation:
     key: Nieuwe Fibrafort boten
@@ -91,9 +91,6 @@ eleventyNavigation:
 
 <section id="blog-986">
     <div class="cs-container">
-        {% set found = false %}
-        {%- for post in collections.post | reverse -%}
-        {% if "fibrafort" in post.data.tags and not found %}
         <div class="cs-content">
             <div class="cs-flex">
                 <span class="cs-topper">Te koop</span>
@@ -102,26 +99,38 @@ eleventyNavigation:
         </div>
         <ul class="cs-card-group">
             <div class="cs-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">{{ post.data.title }}</h3>
-                        <span class="cs-available">{{ post.data.price }}</span>
-                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
+                {%- set newHand = collections.fibrafort | last -%}
+                <a href="{{ newHand.url }}">
+                    <li class="cs-item">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ newHand.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ newHand.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ newHand.data.image }}"
+                                alt="{{ newHand.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ newHand.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
+                            <div>
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ newHand.data.price }}
+                                </span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>
+                                    {{ newHand.data.bouwjaar }}</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
             </div>
         </ul>
-        {% set found = true %}
-        {% endif %}
-        {%- endfor -%}
     </div>
 </section>
 

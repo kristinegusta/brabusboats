@@ -43,37 +43,43 @@ eleventyNavigation:
         <ul class="cs-card-group">
             {%- for post in collections.tweedehands | reverse -%}
             <div class="cs-group">
-                <li class="cs-item">
-                    {% if post.data.status %}
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    {% else %}
-                    <picture class="cs-picture sold">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    {% endif %}
-
-                    <div class="cs-info">
-                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                <a href="{{ post.url }}">
+                    <li class="cs-item">
                         {% if post.data.status %}
-                        <span class="cs-available">€ {{ post.data.price }}</span>
+                        <picture class="cs-picture">
                         {% else %}
-                        <span class="cs-sold">Verkocht</span>
+                        <picture class="cs-picture sold">
                         {% endif %}
-                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ post.data.image }}"
+                                alt="{{ post.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
+                            <div>
+                                {% if post.data.status %}
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ post.data.price
+                                    }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
+                                    post.data.bouwjaar }}</span>
+                                {% else %}
+                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </li>
+                </a>
             </div>
             {%- endfor -%}
 

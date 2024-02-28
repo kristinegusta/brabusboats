@@ -12,9 +12,10 @@ public_folder: "/assets/images/blog"
 collections:
   - name: "fibrafort_boten"
     label: "Fibrafort boten"
-    folder: "src/content/blog"
+    folder: "src/content/blog/fibrafort"
     create: true
     slug: "{{title}}"
+    sortable_fields: ["tags", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -62,9 +63,10 @@ collections:
       - { label: "Drive", name: "drive", widget: "string", required: false }
   - name: "tweedehands_boten"
     label: "Tweedehands boten"
-    folder: "src/content/blog"
+    folder: "src/content/blog/tweedehands"
     create: true
     slug: "{{title}}"
+    sortable_fields: ["tags", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -115,3 +117,28 @@ collections:
       - { label: "Motorh", name: "motorh", widget: "string", required: false }
       - { label: "Motor", name: "motor", widget: "string", required: false }
       - { label: "Drive", name: "drive", widget: "string", required: false }
+  - name: "tohatsu"
+    label: "Tohatsu"
+    folder: "src/content/blog/tohatsu"
+    create: true
+    slug: "{{title}}"
+    sortable_fields: ["tags", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["motoren"] }
+      - { label: "Available", name: "status", widget: "boolean", default: true }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - {
+          label: "Gallery",
+          name: "galleryImages",
+          widget: "list",
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: "Label", name: "label", widget: "string" },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }

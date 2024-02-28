@@ -191,27 +191,45 @@
     max-width: 20ch;
     color: var(--bodyTextColorWhite);
   }
-  #blog-986 .cs-sold {
-    font-size: 10px;
-    background-color: var(--primary);
-    border-radius: 8px;
-    padding: 0px 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
   #blog-986 .cs-available {
     font-size: 12px;
     background-color: var(--secondary);
     border-radius: 8px;
-    padding: 0px 12px;
-    text-transform: uppercase;
+    padding: 2px 12px;
     letter-spacing: 1px;
     color: white;
     font-weight: 700;
     margin-bottom: 12px;
+    margin-right: 6px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  #blog-986 .cs-available i {
+    margin-right: 4px;
+  }
+  #blog-986 .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #blog-986 .sold {
+    opacity: 0.5;
+  }
+  #blog-986 .cs-sold {
+    font-size: 12px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 2px 12px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-right: 6px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  #blog-986 .cs-sold i {
+    margin-right: 4px;
   }
   #blog-986 .cs-button-solid {
     font-size: 0.85em;

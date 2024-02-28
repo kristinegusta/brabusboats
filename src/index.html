@@ -265,7 +265,7 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <div class="cs-group">
                 <a href="/fibrafort" class="cs-button-solid">Nieuwe Fibrafort boten te koop</a>
-                {%- set newHand = collections.fibrafort | first -%}
+                {%- set newHand = collections.fibrafort | last -%}
                 <a href="{{ newHand.url }}">
                     <li class="cs-item">
                         <picture class="cs-picture">
@@ -278,31 +278,35 @@ eleventyNavigation:
                         </picture>
 
                         <div class="cs-info">
-                            <h3 class="cs-h3">{{ newHand.data.title }}</h3>
-                            <picture class="cs-link-icon">
-                                <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
-                                    alt="link icon" width="22" height="22">
-                            </picture>
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ newHand.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
                             <div>
                                 <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
                                     {{ newHand.data.price }}
                                 </span>
                                 <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>
                                     {{ newHand.data.bouwjaar }}</span>
-                                <span class="cs-available"><i class="fa-solid fa-anchor"></i>
-                                    {{ newHand.data.drive }}</span>
                             </div>
                         </div>
                     </li>
                 </a>
             </div>
             <div class="cs-group">
-                <a href="blog" class="cs-button-solid">Tweedehands boten te koop</a>
+                <a href="/tweedehands-boten" class="cs-button-solid">Tweedehands boten te koop</a>
 
-                {%- set secondHand = collections.tweedehands | first -%}
+                {%- set secondHand = collections.tweedehands | last -%}
                 <a href="{{ secondHand.url }}">
                     <li class="cs-item">
+                        {% if secondHand.data.status %}
                         <picture class="cs-picture">
+                        {% else %}
+                        <picture class="cs-picture sold">
+                        {% endif %}
                             <!--Mobile Image-->
                             <source media="(max-width: 600px)" srcset="{{ secondHand.data.image }}">
                             <!--Tablet and above Image-->
@@ -312,19 +316,23 @@ eleventyNavigation:
                         </picture>
 
                         <div class="cs-info">
-                            <h3 class="cs-h3">{{ secondHand.data.title }}</h3>
-                            <picture class="cs-link-icon">
-                                <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
-                                    alt="link icon" width="22" height="22">
-                            </picture>
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ secondHand.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
                             <div>
-                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>{{ secondHand.data.price
+                                {% if secondHand.data.status %}
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ secondHand.data.price
                                     }}</span>
                                 <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
                                     secondHand.data.bouwjaar }}</span>
-                                <span class="cs-available"><i class="fa-solid fa-anchor"></i>
-                                    {{ secondHand.data.drive }}</span>
-
+                                {% else %}
+                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                                {% endif %}
                             </div>
                         </div>
                     </li>

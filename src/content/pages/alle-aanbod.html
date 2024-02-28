@@ -39,58 +39,57 @@ eleventyNavigation:
                     vandaag
                     nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
             </div>
-            <a href="/tweedehands" class="cs-button-solid">Bekijk alles</a>
+            <a href="/tweedehands-boten" class="cs-button-solid">Bekijk alles</a>
         </div>
         <ul class="cs-card-group">
-
-            {%- for post in collections.post | reverse -%}
-            {% if "tweedehands" in post.data.tags %}
+            {%- set reverseSecondHands = collections.tweedehands | reverse -%}
+            {%- for post in reverseSecondHands.slice(0,3) -%}
             <div class="cs-group">
-                <li class="cs-item">
-                    {% if post.data.status %}
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    {% else %}
-                    <picture class="cs-picture sold">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    {% endif %}
-
-                    <div class="cs-info">
-                        <h3 class="cs-h3">{{ post.data.title }}</h3>
+                <a href="{{ post.url }}">
+                    <li class="cs-item">
                         {% if post.data.status %}
-                        <span class="cs-available">€ {{ post.data.price }}</span>
+                        <picture class="cs-picture">
                         {% else %}
-                        <span class="cs-sold">Verkocht</span>
+                        <picture class="cs-picture sold">
                         {% endif %}
-                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ post.data.image }}"
+                                alt="{{ post.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
+                            <div>
+                                {% if post.data.status %}
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ post.data.price
+                                    }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
+                                    post.data.bouwjaar }}</span>
+                                {% else %}
+                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </li>
+                </a>
             </div>
-
-            {% endif %}
             {%- endfor -%}
-
         </ul>
     </div>
 </section>
 
 <section id="fibrafort">
     <div class="cs-container">
-        {% set foundFibra = false %}
-        {%- for post in collections.post | reverse -%}
-        {% if "fibrafort" in post.data.tags and not found %}
         <div class="cs-content">
             <div class="cs-flex">
                 <!-- <span class="cs-topper">Te koop</span> -->
@@ -101,29 +100,38 @@ eleventyNavigation:
         </div>
         <ul class="cs-card-group">
             <div class="cs-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                        <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="stylist" width="413"
-                            height="480">
-                    </picture>
-                    <div class="cs-info">
-                        <h3 class="cs-h3">{{ post.data.title }}</h3>
-                        <span class="cs-available">{{ post.data.price }}</span>
-                        <span class="cs-desc">
-                            {{ post.data.description }}
-                        </span>
-                        <a href="{{ post.url }}" class="cs-link">Ondek meer</a>
-                    </div>
-                </li>
+                {%- set newHand = collections.fibrafort | last -%}
+                <a href="{{ newHand.url }}">
+                    <li class="cs-item">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ newHand.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ newHand.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ newHand.data.image }}"
+                                alt="{{ newHand.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ newHand.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
+                            <div>
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ newHand.data.price }}
+                                </span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>
+                                    {{ newHand.data.bouwjaar }}</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
             </div>
         </ul>
-        {% set foundFibra = true %}
-        {% endif %}
-        {%- endfor -%}
     </div>
 </section>
 
@@ -132,15 +140,15 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <div class="cs-flex">
-                <span class="cs-topper">Aanbod</span>
-                <h2 class="cs-title">Verkoop tweedehands trailers</h2>
-                <p>Brabus Boats staat paraat om u te adviseren en de ideale boottrailer te vinden die perfect aansluit
-                    op
-                    uw behoeften. Kies voor betrouwbaarheid en vakmanschap in elke trailer die wij aanbieden. Neem
-                    vandaag
-                    nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
+               
+                <span class="cs-topper">Buitenboordmotoren</span>
+                <h2 class="cs-title">NIEUWE buitenboordmotoren Tohatsu</h2>
+                <p class="cs-text">
+                    Wij zijn een officiële verdeler van het Merk Tohatsu voor België. Alle motoren van 2.5pk tot 140pk
+                    met de nodige instrumenten kunnen wij verkrijgen via de europese importeur.
+                </p>
             </div>
-            <a href="" class="cs-button-solid">Bekijk alles</a>
+            <a href="/tohatsu" class="cs-button-solid">Bekijk alles over tohatsu</a>
         </div>
         <ul class="cs-card-group">
             <div class="cs-group">
@@ -204,7 +212,6 @@ eleventyNavigation:
                     </div>
                 </li>
             </div>
-
         </ul>
     </div>
 </section>
@@ -216,70 +223,23 @@ eleventyNavigation:
 <section id="RPsbsr-74">
     <div class="cs-container">
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
-            <source media="(min-width: 601px)" srcset="/assets/images/banner/tohatsu-logo-white.png">
-            <img loading="lazy" decoding="async" src="/assets/images/banner/tohatsu-logo-white.png"
+            <source media="(max-width: 600px)" srcset="/assets/images/trailers.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/trailers.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/trailers.jpg"
                 alt="Buitenboordmotoren" width="500" height="552" aria-hidden="true">
         </picture>
         <div class="cs-content">
-            <span class="cs-topper">Buitenboordmotoren</span>
-            <h2 class="cs-title">NIEUWE buitenboordmotoren Tohatsu</h2>
-            <p class="cs-text">
-                Wij zijn een officiële verdeler van het Merk Tohatsu voor België. Alle motoren van 2.5pk tot 140pk
-                met de nodige instrumenten kunnen wij verkrijgen via de europese importeur.
-            </p>
-            <a href="/fibrafort" class="cs-button-solid">Bekijk alles over Tohatsu motoren</a>
+            <span class="cs-topper">Aanbod trailers</span>
+            <h2 class="cs-title">Verkoop tweedehands trailers</h2>
+            
+            <p class="cs-text">Brabus Boats staat paraat om u te adviseren en de ideale boottrailer te vinden die perfect aansluit
+                op
+                uw behoeften. Kies voor betrouwbaarheid en vakmanschap in elke trailer die wij aanbieden. Neem
+                vandaag
+                nog contact met ons op voor meer informatie om ons assortiment boottrailers te ontdekken.</p>
+            <a href="/contact" class="cs-button-solid">Contacteer ons voor meer informatie</a>
         </div>
     </div>
 </section>
 
-
-<!-- <div class="blog-container main-content-wrapper">
-        <div class="main-content">
-            <h2>Tweedehands boten</h2>
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="recent-articles">
-      
-                        <picture class="blog-mainImage">
-                            <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                            width="795"
-                            height="400"
-                            decoding="async" />
-                        </picture>
-                 
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                       
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async" />
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
-                             
-                                <span class="blog-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="blog-h1">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="blog-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
-        </div>
-
-    </div> -->
 {% endblock %}

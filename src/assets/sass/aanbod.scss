@@ -47,28 +47,50 @@
             color: var(--bodyTextColorWhite);
         }
 
-        .cs-sold {
-            font-size: 10px;
-            background-color: var(--primary);
-            border-radius: 8px;
-            padding: 0px 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
         .cs-available {
             font-size: 12px;
             background-color: var(--secondary);
             border-radius: 8px;
-            padding: 0px 12px;
-            text-transform: uppercase;
+            padding: 2px 12px;
             letter-spacing: 1px;
             color: white;
             font-weight: 700;
             margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .sold {
+            opacity: 0.5;
+        }
+
+        .cs-sold {
+            font-size: 12px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            padding: 2px 12px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
         }
 
 
@@ -193,8 +215,10 @@
             }
         }
 
+
+
         .cs-info {
-            width: 83%;
+            width: 100%;
             max-width: calc(420 / 16 * 1rem);
             /* 16px - 24px */
             padding: clamp(1rem, 2vw, 1.5rem);
@@ -353,8 +377,50 @@
         padding: var(--sectionPadding);
         background-color: #1c1c1c;
 
+        .cs-available {
+            font-size: 12px;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            padding: 2px 12px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
         .sold {
             opacity: 0.5;
+        }
+
+        .cs-sold {
+            font-size: 12px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            padding: 2px 12px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
         }
 
         p {
@@ -794,7 +860,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                object-fit: contain;
+                object-fit: cover;
                 border-radius: 6px;
             }
         }

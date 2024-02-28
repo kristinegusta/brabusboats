@@ -1,0 +1,147 @@
+---
+title: 'Nieuwe Tohatsu motoren'
+description: 'Wij zijn een officiële verdeler van het Merk Tohatsu voor België. Alle motoren van 2.5pk tot 140pk met de
+nodige instrumenten kunnen wij verkrijgen via de europese importeur.'
+preloadImg: '/assets/images/pages/tohatsu/tohatsu.jpg'
+permalink: 'tohatsu/'
+eleventyNavigation:
+    key: Nieuwe Tohatsu motoren
+    parent: Aanbod
+    order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/tohatsu.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Official Tohatsu dealer</h1>
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/pages/tohatsu/tohatsu.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/pages/tohatsu/tohatsu.jpg">
+        <img aria-hidden="true" decoding="async" src="/assets/images/pages/tohatsu/tohatsu.jpg" alt="tohatsu"
+            width="2500" height="1667" loading="eager">
+    </picture>
+</section>
+
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-88">
+    <div class="cs-container">
+        <!-- Left Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/tohatsu/tohatsu1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/tohatsu/tohatsu1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/tohatsu/tohatsu1.jpg" alt="tohatsu"
+                    width="254" height="262">
+            </picture>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/tohatsu/tohatsu2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/tohatsu/tohatsu2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/tohatsu/tohatsu2.jpg"
+                    alt="tohatsu2" width="254" height="262">
+            </picture>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/tohatsu/tohatsu3.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/tohatsu/tohatsu3.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/tohatsu/tohatsu3.jpg"
+                    alt="tohatsu3" width="254" height="262">
+            </picture>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/pages/tohatsu/tohatsu4.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/pages/tohatsu/tohatsu4.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/pages/tohatsu/tohatsu4.jpg"
+                    alt="tohatsu4" width="254" height="262">
+            </picture>
+        </div>
+        <!-- Right Section -->
+        <div class="cs-content">
+            <span class="cs-topper">Aanbod</span>
+            <h2 class="cs-title">Nieuwe Tohatsu motoren te koop</h2>
+            <p class="cs-text">
+                Wij zijn een officiële verdeler van het Merk Tohatsu voor België. Alle motoren van 2.5pk tot 140pk met
+                de nodige instrumenten kunnen wij verkrijgen via de europese importeur.
+            </p>
+            <span>Waarom kiezen voor tohatsu: </span>
+            <ul>
+                <li>prijskwaliteit</li>
+                <li>Tot 6 jaar garantie</li>
+                <li>sportieve uitstraling</li>
+                <li>mooi design</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="blog-986">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <h2 class="cs-title">Ondek onze selectie Tohatsu motoren</h2>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            {%- for post in collections.tweedehands | reverse -%}
+            <div class="cs-group">
+                <a href="{{ post.url }}">
+                    <li class="cs-item">
+                        {% if post.data.status %}
+                        <picture class="cs-picture">
+                        {% else %}
+                        <picture class="cs-picture sold">
+                        {% endif %}
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                            <img loading="lazy" decoding="async" src="{{ post.data.image }}"
+                                alt="{{ post.data.imageAlt }}" width="413" height="480">
+                        </picture>
+
+                        <div class="cs-info">
+                            <div class="header-wrapper">
+                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <picture class="cs-link-icon">
+                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
+                                        alt="link icon" width="22" height="22">
+                                </picture>
+                            </div>
+                            <div>
+                                {% if post.data.status %}
+                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                    {{ post.data.price
+                                    }}</span>
+                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
+                                    post.data.bouwjaar }}</span>
+                                {% else %}
+                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            </div>
+            {%- endfor -%}
+
+        </ul>
+    </div>
+</section>
+
+
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

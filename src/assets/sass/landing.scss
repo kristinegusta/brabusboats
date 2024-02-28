@@ -698,28 +698,39 @@
             color: var(--bodyTextColorWhite);
         }
 
-        .cs-sold {
-            font-size: 10px;
-            background-color: var(--primary);
-            border-radius: 8px;
-            padding: 0px 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: white;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .cs-link-icon {
-            position: absolute;
-            right: 1rem;
-        }
-
         .cs-available {
             font-size: 12px;
             background-color: var(--secondary);
             border-radius: 8px;
-            padding: 4px 12px;
+            padding: 2px 12px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .sold {
+            opacity: 0.5;
+        }
+
+        .cs-sold {
+            font-size: 12px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            padding: 2px 12px;
             letter-spacing: 1px;
             color: white;
             font-weight: 700;
@@ -790,6 +801,7 @@
             position: relative;
         }
 
+
         .cs-item {
             list-style: none;
             width: 100%;
@@ -805,6 +817,7 @@
                 cursor: pointer;
 
                 .cs-info {
+
                     &:before {
                         opacity: 1;
                         background-color: var(--secondary);

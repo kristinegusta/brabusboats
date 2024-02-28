@@ -24,8 +24,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* 40px - 64px */
-    gap: clamp(2.5rem, 3.9vw, 4rem);
+  }
+  #services-1665 .cs-sold {
+    font-size: 16px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-right: 6px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  #services-1665 .cs-sold i {
+    margin-right: 4px;
+  }
+  #services-1665 .blog-text {
+    max-width: 70ch;
+  }
+  #services-1665 .blog-text h3 {
+    margin: 2rem 0;
+  }
+  #services-1665 .blog-text p,
+  #services-1665 .blog-text ul {
+    margin-bottom: 1rem;
+  }
+  #services-1665 .blog-text li {
+    margin-left: 2rem;
   }
   #services-1665 .cs-topper {
     font-size: 13px;
@@ -56,29 +83,27 @@
     width: 100%;
     /* 328px - 640px */
     height: auto;
-    max-height: 800px;
     display: block;
     margin-bottom: 2rem;
   }
   #services-1665 .cs-picture img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
+    max-height: 500px;
   }
   #services-1665 .cs-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
     /* 28px - 40px */
     gap: 1rem;
   }
   #services-1665 .cs-wrapper li {
     margin-left: 3rem;
-  }
-  #services-1665 h3 {
-    margin-bottom: 2rem;
   }
   #services-1665 .cs-kenmerken {
     width: 100%;
@@ -268,9 +293,6 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services-1665 .cs-picture {
-    margin-bottom: 3rem;
-  }
   #services-1665 .cs-wrapper {
     max-width: 36.625rem;
   }
@@ -289,6 +311,7 @@
   #services-1665 .cs-content {
     width: 51.815%;
     flex: none;
+    margin-right: 1rem;
   }
   #services-1665 .cs-text {
     margin-top: 9.75rem;

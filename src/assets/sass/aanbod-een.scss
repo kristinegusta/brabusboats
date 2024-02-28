@@ -27,8 +27,41 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* 40px - 64px */
-            gap: clamp(2.5rem, 3.9vw, 4rem);
+        }
+
+        .cs-sold {
+            font-size: 16px;
+            background-color: var(--primary);
+            border-radius: 8px;
+            padding: 8px 20px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 12px;
+            margin-right: 6px;
+            white-space: nowrap;
+            display: inline-block;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        .blog-text {
+            max-width: 70ch;
+
+            h3 {
+                margin: 2rem 0;
+            }
+
+            p,
+            ul {
+                margin-bottom: 1rem;
+            }
+
+            li {
+                margin-left: 2rem;
+            }
         }
 
         .cs-topper {
@@ -65,15 +98,16 @@
             width: 100%;
             /* 328px - 640px */
             height: auto;
-            max-height: 800px;
+
             display: block;
             margin-bottom: 2rem;
 
             img {
                 width: 100%;
                 height: auto;
-                object-fit: cover;
+                object-fit: contain;
                 border-radius: 6px;
+                max-height: 500px;
             }
         }
 
@@ -82,6 +116,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            width: 100%;
             /* 28px - 40px */
             gap: 1rem;
 
@@ -90,13 +125,9 @@
             }
         }
 
-        h3 {
-            margin-bottom: 2rem;
-        }
 
         .cs-kenmerken {
             width: 100%;
-
 
             .cs-kenmerk {
                 display: flex;
@@ -320,10 +351,6 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #services-1665 {
-        .cs-picture {
-            margin-bottom: 3rem;
-        }
-
         .cs-wrapper {
             max-width: calc(586 / 16 * 1rem);
         }
@@ -347,6 +374,7 @@
         .cs-content {
             width: 51.815%;
             flex: none;
+            margin-right: 1rem;
         }
 
         .cs-text {

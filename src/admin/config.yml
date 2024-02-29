@@ -126,8 +126,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["motoren"] }
-      - { label: "Available", name: "status", widget: "boolean", default: true }
+      - { label: "Tags", name: "tags", widget: "list", default: ["tohatsu"] }
+      - { label: "In stock", name: "status", widget: "boolean", default: true }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }

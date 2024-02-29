@@ -94,48 +94,48 @@ eleventyNavigation:
             </div>
         </div>
         <ul class="cs-card-group">
-            {%- for post in collections.tweedehands | reverse -%}
+            {%- set reverseSecondHands = collections.tohatsu | reverse -%}
+            {%- for post in reverseSecondHands -%}
             <div class="cs-group">
                 <a href="{{ post.url }}">
                     <li class="cs-item">
                         {% if post.data.status %}
                         <picture class="cs-picture">
-                        {% else %}
-                        <picture class="cs-picture sold">
-                        {% endif %}
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
-                            <img loading="lazy" decoding="async" src="{{ post.data.image }}"
-                                alt="{{ post.data.imageAlt }}" width="413" height="480">
-                        </picture>
-
-                        <div class="cs-info">
-                            <div class="header-wrapper">
-                                <h3 class="cs-h3">{{ post.data.title }}</h3>
-                                <picture class="cs-link-icon">
-                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
-                                        alt="link icon" width="22" height="22">
-                                </picture>
-                            </div>
-                            <div>
-                                {% if post.data.status %}
-                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
-                                    {{ post.data.price
-                                    }}</span>
-                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
-                                    post.data.bouwjaar }}</span>
-                                {% else %}
-                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                            {% else %}
+                            <picture class="cs-picture sold">
                                 {% endif %}
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                                <img loading="lazy" decoding="async" src="{{ post.data.image }}"
+                                    alt="{{ post.data.imageAlt }}" width="413" height="480">
+                            </picture>
+
+                            <div class="cs-info">
+                                <div class="header-wrapper">
+                                    <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                    <picture class="cs-link-icon">
+                                        <img loading="lazy" decoding="async"
+                                            src="/assets/images/icons/external-link.svg" alt="link icon" width="22"
+                                            height="22">
+                                    </picture>
+                                </div>
+                                <div>
+                                    {% if post.data.status %}
+                                    <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                        {{ post.data.price
+                                        }}
+                                        {% else %}
+                                        <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i>
+                                            Uitverkocht</span>
+                                        {% endif %}
+                                </div>
                             </div>
-                        </div>
                     </li>
                 </a>
             </div>
             {%- endfor -%}
-
         </ul>
     </div>
 </section>

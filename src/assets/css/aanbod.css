@@ -65,7 +65,8 @@
   }
   #blog-986 .cs-sold {
     font-size: 12px;
-    background-color: var(--primary);
+    background-color: #8c8c8c;
+    text-transform: uppercase;
     border-radius: 8px;
     padding: 2px 12px;
     letter-spacing: 1px;
@@ -340,7 +341,8 @@
   }
   #fibrafort .cs-sold {
     font-size: 12px;
-    background-color: var(--primary);
+    background-color: #8c8c8c;
+    text-transform: uppercase;
     border-radius: 8px;
     padding: 2px 12px;
     letter-spacing: 1px;
@@ -385,7 +387,8 @@
   }
   #fibrafort .cs-sold {
     font-size: 10px;
-    background-color: var(--primary);
+    background-color: #8c8c8c;
+    text-transform: uppercase;
     border-radius: 8px;
     padding: 0px 12px;
     text-transform: uppercase;

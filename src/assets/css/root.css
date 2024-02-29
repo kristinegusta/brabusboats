@@ -1157,9 +1157,10 @@ html {
   }
   #footer .socials a {
     color: var(--primary);
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: 0.5s all ease;
+    margin-right: 4px;
   }
   #footer .socials a:hover {
     color: var(--secondary);
@@ -1333,9 +1334,6 @@ html {
   #banner {
     padding: var(--sectionPadding);
     background-color: #FFF;
-  }
-  #banner img {
-    filter: grayscale(100%);
   }
   #banner .cs-topper {
     text-align: center;

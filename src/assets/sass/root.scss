@@ -1423,9 +1423,10 @@ html {
         .socials {
             a {
                 color: var(--primary);
-                font-size: 1rem;
+                font-size: 1.2rem;
                 text-decoration: none;
                 transition: 0.5s all ease;
+                margin-right: 4px;
 
                 &:hover {
                     color: var(--secondary);
@@ -1646,10 +1647,10 @@ html {
     #banner {
         padding: var(--sectionPadding);
         background-color: #FFF;
-
-        img {
-            filter: grayscale(100%);
-        }
+        // client requested colored banner
+        // img {    
+        //     filter: grayscale(100%);
+        // }
 
         .cs-topper {
             text-align: center;

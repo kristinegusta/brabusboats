@@ -417,6 +417,8 @@
 
     #RPsbs-74,
     #RPsbsr-74 {
+        background-color: #f7f7f7;
+
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
             flex-direction: row;
@@ -446,29 +448,6 @@
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #RPsbsr-74 {
-        background-color: #1a1a1a;
-
-        .cs-title,
-        .cs-text {
-            color: var(--bodyTextColorWhite);
-        }
-
-        .cs-text {
-            opacity: 0.8;
-        }
-
-        .cs-picture {
-
-            &:before,
-            &:after {
-                background-color: var(--bodyTextColorWhite);
-            }
-        }
-    }
-}
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48em) {

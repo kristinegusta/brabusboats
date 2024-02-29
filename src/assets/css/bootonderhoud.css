@@ -360,6 +360,10 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+  #RPsbs-74,
+  #RPsbsr-74 {
+    background-color: #f7f7f7;
+  }
   #RPsbs-74 .cs-container,
   #RPsbsr-74 .cs-container {
     max-width: 80rem;
@@ -387,22 +391,6 @@
 /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #RPsbsr-74 {
-    background-color: #1a1a1a;
-  }
-  #RPsbsr-74 .cs-title,
-  #RPsbsr-74 .cs-text {
-    color: var(--bodyTextColorWhite);
-  }
-  #RPsbsr-74 .cs-text {
-    opacity: 0.8;
-  }
-  #RPsbsr-74 .cs-picture:before, #RPsbsr-74 .cs-picture:after {
-    background-color: var(--bodyTextColorWhite);
-  }
-}
 /* Tablet - 768px */
 @media only screen and (min-width: 48em) {
   #RPsbsr-74 .cs-container {

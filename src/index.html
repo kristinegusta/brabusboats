@@ -265,7 +265,8 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <div class="cs-group">
                 <a href="/fibrafort" class="cs-button-solid">Nieuwe Fibrafort boten te koop</a>
-                {%- set newHand = collections.fibrafort | last -%}
+                {%- for newHand in collections.fibrafort -%}
+                {% if newHand.data.featured %}
                 <a href="{{ newHand.url }}">
                     <li class="cs-item">
                         <picture class="cs-picture">
@@ -295,11 +296,13 @@ eleventyNavigation:
                         </div>
                     </li>
                 </a>
+                {% endif %}
+                {%- endfor -%}
             </div>
             <div class="cs-group">
                 <a href="/tweedehands-boten" class="cs-button-solid">Tweedehands boten te koop</a>
-
-                {%- set secondHand = collections.tweedehands | last -%}
+                {%- for secondHand in collections.tweedehands -%}
+                {% if secondHand.data.featured %}
                 <a href="{{ secondHand.url }}">
                     <li class="cs-item">
                         {% if secondHand.data.status %}
@@ -337,11 +340,12 @@ eleventyNavigation:
                         </div>
                     </li>
                 </a>
+                {% endif %}
+                {%- endfor -%}
             </div>
         </ul>
     </div>
 </section>
-
 
 
 {% include 'components/cta.html' %}

@@ -18,9 +18,18 @@ collections:
     sortable_fields: ["tags", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["fibrafort"] }
-      - { label: "Available", name: "status", widget: "boolean", default: true }
+      - {
+          label: "Available?",
+          name: "status",
+          widget: "boolean",
+          default: true,
+        }
+      - {
+          label: "Front page?",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
@@ -61,6 +70,12 @@ collections:
       - { label: "Motorh", name: "motorh", widget: "string", required: false }
       - { label: "Motor", name: "motor", widget: "string", required: false }
       - { label: "Drive", name: "drive", widget: "string", required: false }
+      - {
+          label: "Tags - do not edit",
+          name: "tags",
+          widget: "list",
+          default: ["fibrafort"],
+        }
   - name: "tweedehands_boten"
     label: "Tweedehands boten"
     folder: "src/content/blog/tweedehands"
@@ -69,14 +84,18 @@ collections:
     sortable_fields: ["tags", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
       - {
-          label: "Tags",
-          name: "tags",
-          widget: "list",
-          default: ["tweedehands"],
+          label: "Available?",
+          name: "status",
+          widget: "boolean",
+          default: true,
         }
-      - { label: "Available", name: "status", widget: "boolean", default: true }
+      - {
+          label: "Front page?",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
@@ -117,6 +136,12 @@ collections:
       - { label: "Motorh", name: "motorh", widget: "string", required: false }
       - { label: "Motor", name: "motor", widget: "string", required: false }
       - { label: "Drive", name: "drive", widget: "string", required: false }
+      - {
+          label: "Tags - do not edit",
+          name: "tags",
+          widget: "list",
+          default: ["tweedehands"],
+        }
   - name: "tohatsu"
     label: "Tohatsu"
     folder: "src/content/blog/tohatsu"
@@ -126,7 +151,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["tohatsu"] }
       - { label: "In stock", name: "status", widget: "boolean", default: true }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
@@ -142,3 +166,9 @@ collections:
             ],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags - do no edit",
+          name: "tags",
+          widget: "list",
+          default: ["tohatsu"],
+        }

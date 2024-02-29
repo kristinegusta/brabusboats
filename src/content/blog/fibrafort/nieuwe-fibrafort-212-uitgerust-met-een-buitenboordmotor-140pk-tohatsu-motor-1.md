@@ -1,11 +1,7 @@
 ---
 title: "New Fibrafort 212 - 140hp Tohatsu "
-description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
-  volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie
-  tijdsloze nardo grey kleur. "
-tags:
-  - fibrafort
 status: true
+featured: true
 price: "49 950 excl btw "
 image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
@@ -39,11 +35,16 @@ galleryImages:
 lengte: 673cm
 breedte: 232cm
 diepgang: 0.52cm
-gewicht: 1350 kg
 bouwjaar: 2024 NEW
 vermogen: 140 pk kan geupgrade worden tot 175pk
 motorh: Tohatsu
 drive: Buitenboordmotor
+tags:
+  - fibrafort
+description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
+  volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie
+  tijdsloze nardo grey kleur. "
+gewicht: 1350 kg
 ---
 Deze prachtige Braziliaanse bowrider boot is CE gekeurd en volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie tijdsloze nardo grey kleur. 
 

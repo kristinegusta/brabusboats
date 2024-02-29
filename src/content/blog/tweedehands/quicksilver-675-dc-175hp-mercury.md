@@ -1,9 +1,7 @@
 ---
 title: Quicksilver 675 DC - 175hp Mercury
-description: Quicksilver 675 DC -175hp Mercury 3.4L V6 – Weinig draaiuren
-tags:
-  - tweedehands
 status: true
+featured: false
 price: "51750"
 image: /assets/images/blog/img-20231226-wa0020.jpg
 imageAlt: Quicksilver 675 DC
@@ -23,12 +21,15 @@ model: 675DC
 lengte: 648cm
 breedte: 247cm
 diepgang: 0.79cm
-gewicht: "1651"
 bouwjaar: "2019"
 vermogen: "175"
 motorh: "110.2"
 motor: Mercury 175hp - 4 Stroke
 drive: Buitenboordmotor
+tags:
+  - tweedehands
+description: Quicksilver 675 DC -175hp Mercury 3.4L V6 – Weinig draaiuren
+gewicht: "1651"
 ---
 Deze prachtige DayCruiser boot is CE gekeurd en heeft alle nodige documenten. 
 

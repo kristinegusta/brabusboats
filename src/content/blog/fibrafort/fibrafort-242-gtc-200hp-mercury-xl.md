@@ -2,7 +2,7 @@
 title: Fibrafort 242 GTC - 200hp Mercury XL
 description: nieuwe sportieve cruiser met vele opties
 status: true
-featured: false
+featured: true
 price: "99750"
 image: /assets/images/blog/img-20240301-wa0001.jpg
 imageAlt: "fibrafort 242 GTC -200hp Mercury "

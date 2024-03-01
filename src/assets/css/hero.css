@@ -412,7 +412,7 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25rem) {
   #hero-227 {
-    background: url("/assets/images/hero.png");
+    background: url("/assets/images/hero1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

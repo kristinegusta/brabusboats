@@ -18,6 +18,7 @@ collections:
     sortable_fields: ["tags", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short description", name: "description", widget: "string" }
       - {
           label: "Available?",
           name: "status",

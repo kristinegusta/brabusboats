@@ -1,12 +1,12 @@
 ---
-title: Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor
+title: Fibrafort 343 uitgerust met een buitenboordmotor 180pk tohatsu motor
 description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
   volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie
   tijdsloze nardo grey kleur. "
 status: true
-featured: false
+featured: true
 price: "49 950 excl btw "
-image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
+image: /assets/images/blog/screenshot-2024-02-13-at-13-01-46-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:
   - image: /assets/images/blog/fibrafort-212-neus.jpg
@@ -36,7 +36,7 @@ galleryImages:
   - image: /assets/images/blog/img_2401.jpg
     label: Fibrafort 212
 merk: Fibrafort
-model: "212"
+model: "345"
 lengte: 673cm
 breedte: 232cm
 diepgang: 0.52cm

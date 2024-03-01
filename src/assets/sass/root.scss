@@ -1082,8 +1082,8 @@ html {
             &:before {
                 content: "";
                 width: 0%;
-                height: 1px;
-                background: currentColor;
+                height: 2px;
+                background: var(--secondary);
                 opacity: 1;
                 position: absolute;
                 display: block;
@@ -1600,7 +1600,7 @@ html {
                                 content: "";
                                 width: 0%;
                                 height: calc(2 / 16 * 1rem);
-                                background: var(--primary);
+                                background: var(--secondary);
                                 opacity: 1;
                                 display: block;
                                 position: absolute;

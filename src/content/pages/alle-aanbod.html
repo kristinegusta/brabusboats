@@ -107,7 +107,8 @@ eleventyNavigation:
         </div>
         <ul class="cs-card-group">
             <div class="cs-group">
-                {%- set newHand = collections.fibrafort | last -%}
+                {%- for newHand in collections.fibrafort -%}
+                {% if newHand.data.featured %}
                 <a href="{{ newHand.url }}">
                     <li class="cs-item">
                         <picture class="cs-picture">
@@ -137,6 +138,8 @@ eleventyNavigation:
                         </div>
                     </li>
                 </a>
+                {% endif %}
+                {%- endfor -%}
             </div>
         </ul>
     </div>

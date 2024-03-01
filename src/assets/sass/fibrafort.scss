@@ -7,8 +7,13 @@
     #sbsr-88 {
         padding: var(--sectionPadding);
 
+        ul {
+            margin-top: 1rem;
+        }
+
         li {
             margin-left: 2rem;
+            color: var(--bodyTextColor);
         }
 
         .cs-container {

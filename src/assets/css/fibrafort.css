@@ -6,8 +6,12 @@
   #sbsr-88 {
     padding: var(--sectionPadding);
   }
+  #sbsr-88 ul {
+    margin-top: 1rem;
+  }
   #sbsr-88 li {
     margin-left: 2rem;
+    color: var(--bodyTextColor);
   }
   #sbsr-88 .cs-container {
     width: 100%;

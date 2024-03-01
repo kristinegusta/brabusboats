@@ -26,8 +26,7 @@
     gap: clamp(3rem, 6vw, 4rem);
   }
   #blog-986 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -81,7 +80,7 @@
     margin-right: 4px;
   }
   #blog-986 .cs-button-solid {
-    font-size: 0.85em;
+    font-size: 0.95em;
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     text-decoration: none;
@@ -274,13 +273,15 @@
 @media only screen and (min-width: 34.375rem) {
   #blog-986 .cs-content {
     text-align: left;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     gap: 3rem;
   }
   #blog-986 .cs-title {
     margin: 0;
+  }
+  #blog-986 .cs-text {
+    margin-bottom: 0;
   }
   #blog-986 .cs-picture {
     aspect-ratio: 1/1;
@@ -298,6 +299,9 @@
   #blog-986 .cs-container {
     max-width: 80rem;
   }
+  #blog-986 .cs-content {
+    flex-direction: row;
+  }
   #blog-986 .cs-card-group {
     flex-direction: row;
     flex-wrap: wrap;
@@ -308,6 +312,7 @@
   }
   #blog-986 .cs-button-solid {
     width: fit-content;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 0rem) {
@@ -372,8 +377,7 @@
     gap: clamp(3rem, 6vw, 4rem);
   }
   #fibrafort .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -409,7 +413,7 @@
     margin-bottom: 12px;
   }
   #fibrafort .cs-button-solid {
-    font-size: 0.85em;
+    font-size: 0.95em;
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     text-decoration: none;
@@ -509,7 +513,7 @@
     transition: transform 0.9s;
   }
   #fibrafort .cs-info {
-    width: 83%;
+    width: 100%;
     max-width: 26.25rem;
     /* 16px - 24px */
     padding: clamp(1rem, 2vw, 1.5rem);
@@ -655,7 +659,7 @@
     max-width: 34.375rem;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
@@ -682,7 +686,8 @@
   }
   #RPsbs-74 .cs-button-solid,
   #RPsbsr-74 .cs-button-solid {
-    font-size: 1rem;
+    font-size: 0.95em;
+    width: 100%;
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
@@ -785,6 +790,9 @@
   #RPsbsr-74 .cs-picture:before, #RPsbsr-74 .cs-picture:after {
     background-color: var(--bodyTextColorWhite);
   }
+  #RPsbsr-74 .cs-button-solid {
+    width: 100%;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48em) {
@@ -796,6 +804,11 @@
     margin-right: clamp(1rem, 5vw, 1.25rem);
     /* forces it to the left */
     order: 2;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #RPsbsr-74 .cs-button-solid {
+    width: fit-content;
   }
 }
 

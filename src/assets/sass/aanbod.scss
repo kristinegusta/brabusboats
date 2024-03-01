@@ -32,8 +32,7 @@
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -96,7 +95,7 @@
 
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 0.85em);
+            font-size: calc(16 / 16 * 0.95em);
             /* 46px - 56px */
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             text-decoration: none;
@@ -325,7 +324,6 @@
     #blog-986 {
         .cs-content {
             text-align: left;
-            flex-direction: row;
             justify-content: space-between;
             align-items: flex-end;
             gap: calc(48 / 16 * 1rem);
@@ -333,6 +331,10 @@
 
         .cs-title {
             margin: 0;
+        }
+
+        .cs-text {
+            margin-bottom: 0;
         }
 
         .cs-picture {
@@ -357,6 +359,10 @@
             max-width: calc(1280 / 16 * 1rem);
         }
 
+        .cs-content {
+            flex-direction: row;
+        }
+
         .cs-card-group {
             flex-direction: row;
             flex-wrap: wrap;
@@ -369,6 +375,7 @@
 
         .cs-button-solid {
             width: fit-content;
+            margin: 0;
         }
     }
 }
@@ -443,8 +450,7 @@
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -485,7 +491,7 @@
 
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 0.85em);
+            font-size: calc(16 / 16 * 0.95em);
             /* 46px - 56px */
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             text-decoration: none;
@@ -608,7 +614,7 @@
         }
 
         .cs-info {
-            width: 83%;
+            width: 100%;
             max-width: calc(420 / 16 * 1rem);
             /* 16px - 24px */
             padding: clamp(1rem, 2vw, 1.5rem);
@@ -780,7 +786,7 @@
             max-width: calc(550 / 16 * 1rem);
             margin: auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
@@ -807,7 +813,8 @@
         }
 
         .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
+            font-size: 0.95em;
+            width: 100%;
             /* 46px - 56px */
             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
             text-decoration: none;
@@ -925,6 +932,10 @@
                 background-color: var(--bodyTextColorWhite);
             }
         }
+
+        .cs-button-solid {
+            width: 100%;
+        }
     }
 }
 
@@ -940,6 +951,14 @@
             margin-right: clamp(1rem, 5vw, 1.25rem);
             /* forces it to the left */
             order: 2;
+        }
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #RPsbsr-74 {
+        .cs-button-solid {
+            width: fit-content;
         }
     }
 }

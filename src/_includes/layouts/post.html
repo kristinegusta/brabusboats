@@ -160,17 +160,24 @@ eleventyComputed:
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
-
+{% if galleryImages %}
 <section id="gallery-1446">
+    <div class="cs-container title">
+        <h3>Gallery</h3>
+    </div>
     <div class="cs-container">
         <div class="cs-gallery">
+            {% set imagesCount = galleryImages | length %}
             {% for item in galleryImages %}
+            {% if imagesCount == 1 %}
+            <div class="cssbox cs-image" style="max-width: 450px;">
+            {% else %}
             <div class="cssbox cs-image">
+            {% endif %}
                 <a id="image{{ loop.index }}" href="#image{{ loop.index }}"><img class="cssbox_thumb"
                         src="{{ item.image }}" />
                     <span class="cssbox_full"><img src="{{ item.image }}" /></span>
                 </a>
-
                 <a class="cssbox_close" href="#void"></a>
                 {% if loop.index > 1 %}
                 <a class="cssbox_prev" href="#image{{ loop.index - 1 }}">&lt;</a>
@@ -183,7 +190,7 @@ eleventyComputed:
         </div>
     </div>
 </section>
-
+{% endif %}
 
 {% include 'components/cta-boat.html' %}
 

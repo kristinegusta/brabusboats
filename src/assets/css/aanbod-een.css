@@ -90,8 +90,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 6px;
-    max-height: 500px;
+    max-height: 700px;
   }
   #services-1665 .cs-wrapper {
     display: flex;
@@ -311,7 +310,7 @@
   #services-1665 .cs-content {
     width: 51.815%;
     flex: none;
-    margin-right: 1rem;
+    margin-right: 3rem;
   }
   #services-1665 .cs-text {
     margin-top: 9.75rem;
@@ -326,6 +325,12 @@
     padding: var(--sectionPadding);
     background-color: #f7f7f7;
     padding-top: 0rem;
+  }
+  #gallery-1446 h3 {
+    margin-bottom: 1rem;
+  }
+  #gallery-1446 .cs-container.title {
+    align-items: flex-start;
   }
   #gallery-1446 .cs-container {
     width: 100%;

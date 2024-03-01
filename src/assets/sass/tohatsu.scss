@@ -11,6 +11,12 @@
             margin-left: 2rem;
         }
 
+        .strong {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 1rem;
+        }
+
         .cs-container {
             width: 100%;
             /* changes to 1280px at tablet */
@@ -221,7 +227,6 @@
             letter-spacing: 1px;
             color: white;
             font-weight: 700;
-            margin-bottom: 12px;
             margin-right: 6px;
             white-space: nowrap;
             display: inline-block;
@@ -373,7 +378,6 @@
             display: block;
             position: relative;
             z-index: 1;
-            aspect-ratio: 1/1;
 
             img {
                 width: 100%;
@@ -381,10 +385,6 @@
                 object-fit: cover;
                 /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
                 object-position: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
                 transition: transform 0.9s;
             }
         }
@@ -508,10 +508,6 @@
             margin: 0;
         }
 
-        .cs-picture {
-            aspect-ratio: 1/1;
-        }
-
         .cs-decorative {
             display: none;
         }
@@ -533,11 +529,13 @@
         .cs-card-group {
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .cs-group {
             width: 100%;
-            flex: 1 0 21%;
+            flex: 1 0 29%;
+            max-width: 350px;
         }
 
         .cs-button-solid {

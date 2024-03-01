@@ -3,7 +3,7 @@ title: Fibrafort 242 GTC - 200hp Mercury XL
 description: nieuwe sportieve cruiser met vele opties
 status: true
 featured: true
-price: "99750"
+price: "op aanvraag "
 image: /assets/images/blog/img-20240301-wa0001.jpg
 imageAlt: "fibrafort 242 GTC -200hp Mercury "
 galleryImages:
@@ -51,12 +51,10 @@ Deze nieuwe Fibrafort 242 GTC is voorzien alle volgende optie’s:
 * spoelbak met ingebouwde watertank 30L
 * interieur verlichting
 
-
-
 Deze boot kunnen wij zowel uitbouwen met een binnenboord als buitenboordmotor naar keuze. Wij werken samen met Mercury/Mercruiser. 
 
 Deze boot is reeds verkocht maar hebben dezelfde bij besteld die in de maand april bij ons komt. Dus deze is te reserveren met keuze qua motor. 
 
-
+!!Op de bestelde boot geven wij nu een extra korting!!
 
 ontdek dit model nu bij ons.

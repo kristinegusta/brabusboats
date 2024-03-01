@@ -1,6 +1,6 @@
 ---
 title: Quicksilver 675 DC - 175hp Mercury
-status: true
+status: false
 featured: false
 price: "51750"
 image: /assets/images/blog/img-20231226-wa0020.jpg

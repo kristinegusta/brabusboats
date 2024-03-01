@@ -16,7 +16,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 2rem;
 
+        .cs-image-from-gallery {
+            display: none !important;
+        }
 
         .cs-container {
             width: 100%;
@@ -51,7 +55,7 @@
             max-width: 70ch;
 
             h3 {
-                margin: 2rem 0;
+                margin-bottom: 2rem;
             }
 
             p,
@@ -107,7 +111,7 @@
                 height: auto;
                 object-fit: cover;
                 // border-radius: 6px;
-                max-height: 700px;
+                max-height: 500px;
             }
         }
 
@@ -117,8 +121,11 @@
             justify-content: space-between;
             align-items: flex-start;
             width: 100%;
-            /* 28px - 40px */
-            gap: 1rem;
+
+            h3 {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
 
             li {
                 margin-left: 3rem;
@@ -354,6 +361,7 @@
         .cs-wrapper {
             max-width: calc(586 / 16 * 1rem);
         }
+
     }
 }
 
@@ -367,18 +375,31 @@
             align-items: stretch;
         }
 
+        .cs-image-from-gallery {
+            display: block !important;
+        }
+
         .cs-wrapper {
-            justify-content: center;
+            justify-content: flex-start;
+
+            h3 {
+                margin-top: 0;
+            }
         }
 
         .cs-content {
-            width: 51.815%;
-            flex: none;
-            margin-right: 3rem;
+            flex-direction: row;
+            gap: 10px;
+            max-width: none;
         }
 
         .cs-text {
             margin-top: calc(156 / 16 * 1rem);
+        }
+
+        .tohatsu-img {
+            max-width: 500px;
+            max-height: unset !important;
         }
     }
 }
@@ -395,7 +416,7 @@
         padding-top: 0rem;
 
         h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         .cs-container.title {

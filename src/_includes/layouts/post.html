@@ -42,14 +42,15 @@ eleventyComputed:
     {% endif %}
     <h2 class="cs-title">{{ title}}</h2>
     {% if tags.includes("tohatsu") %}
-    <div class="cs-container">
+    <div id="tohatsu" class="cs-container">
         <div class="cs-content">
-            <picture class="cs-picture">
+            <picture class="cs-picture tohatsu-img">
                 <!--Mobile Image-->
                 <source media="(max-width: 600px)" srcset="{{ image }}">
                 <!--Tablet and above Image-->
                 <source media="(min-width: 601px)" srcset="{{ image }}">
-                <img loading="lazy" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" width="605" height="690">
+                <img class="tohatsu-img" loading="lazy" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" width="605"
+                    height="690">
             </picture>
         </div>
         <div class="blog-text">
@@ -58,15 +59,30 @@ eleventyComputed:
         </div>
     </div>
     {% else %}
+
+    <div id="boats" class="cs-content">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{{ image }}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{{ image }}">
+            <img loading="lazy" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" width="605" height="690">
+        </picture>
+        {% for item in galleryImages.slice(0,2) %}
+        <picture class="cs-picture cs-image-from-gallery">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{{ item.image }}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{{ item.image }}">
+            <img loading="lazy" decoding="async" src="{{ item.image }}" alt="{{ imageAlt }}" width="605" height="690">
+        </picture>
+        {% endfor %}
+    </div>
+
     <div class="cs-container">
-        <div class="cs-content">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="{{ image }}">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="{{ image }}">
-                <img loading="lazy" decoding="async" src="{{ image }}" alt="{{ imageAlt }}" width="605" height="690">
-            </picture>
+        <div class="blog-text">
+            <h3>Meer info</h3>
+            {{ content | safe }}
         </div>
         <div class="cs-wrapper">
             <h3>Kenmerken</h3>
@@ -150,10 +166,8 @@ eleventyComputed:
             </div>
         </div>
     </div>
-    <div class="blog-text">
-        <h3>Meer info</h3>
-        {{ content | safe }}
     </div>
+
     {% endif %}
 </section>
 
@@ -171,24 +185,24 @@ eleventyComputed:
             {% for item in galleryImages %}
             {% if imagesCount == 1 %}
             <div class="cssbox cs-image" style="max-width: 450px;">
-            {% else %}
-            <div class="cssbox cs-image">
-            {% endif %}
-                <a id="image{{ loop.index }}" href="#image{{ loop.index }}"><img class="cssbox_thumb"
-                        src="{{ item.image }}" />
-                    <span class="cssbox_full"><img src="{{ item.image }}" /></span>
-                </a>
-                <a class="cssbox_close" href="#void"></a>
-                {% if loop.index > 1 %}
-                <a class="cssbox_prev" href="#image{{ loop.index - 1 }}">&lt;</a>
-                {% endif %}
-                {% if not loop.last %}
-                <a class="cssbox_next" href="#image{{ loop.index + 1 }}">&gt;</a>
-                {% endif %}
+                {% else %}
+                <div class="cssbox cs-image">
+                    {% endif %}
+                    <a id="image{{ loop.index }}" href="#image{{ loop.index }}"><img class="cssbox_thumb"
+                            src="{{ item.image }}" />
+                        <span class="cssbox_full"><img src="{{ item.image }}" /></span>
+                    </a>
+                    <a class="cssbox_close" href="#void"></a>
+                    {% if loop.index > 1 %}
+                    <a class="cssbox_prev" href="#image{{ loop.index - 1 }}">&lt;</a>
+                    {% endif %}
+                    {% if not loop.last %}
+                    <a class="cssbox_next" href="#image{{ loop.index + 1 }}">&gt;</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
 </section>
 {% endif %}
 

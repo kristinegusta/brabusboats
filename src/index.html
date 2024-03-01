@@ -159,8 +159,8 @@ eleventyNavigation:
                         <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Bootonderhoud en diagnoses</h3>
-                            <p class="cs-item-text">Voor speedboten voorzien wij in uitgebreid onderhoud, diagnoses en
-                                reparaties en ook onderhoud binnen/buitenboordmotoren.</p>
+                            <p class="cs-item-text">Wij zijn voorzien van alle diagnosetools voor zowel binnen als
+                                buitenboordmotoren.</p>
                         </div>
                     </a>
                 </li>
@@ -173,8 +173,8 @@ eleventyNavigation:
                         <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Boot accessoires</h3>
-                            <p class="cs-item-text">Wij bieden een uitgebreid assortiment bootaccessoires aan voor een
-                                complete uitrusting van uw vaartuig.</p>
+                            <p class="cs-item-text">Wij bieden een zeer groot assortiment aan accessoires voor uw boot.
+                            </p>
                         </div>
                     </a>
                 </li>
@@ -187,8 +187,8 @@ eleventyNavigation:
                         <!-- Text Grouped For Flexbox-->
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Onderhoud en verkoop boottrailers</h3>
-                            <p class="cs-item-text">Wij verzorgen zowel de verkoop als het onderhoud van trailers, zodat
-                                u zorgeloos en veilig met uw vaartuig de weg op kunt.</p>
+                            <p class="cs-item-text">Geef uw boottrailer dezelfde aandacht als uw boot. Wij doen hier
+                                ook een volledige inspectie op en kunnen de nodige onderhouden uitvoeren..</p>
                         </div>
                     </a>
                 </li>
@@ -200,7 +200,7 @@ eleventyNavigation:
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Aanbod</h3>
-                            <p class="cs-item-text">Uitgebreid assortiment voor de verkoop - boten, trailers, motoren.
+                            <p class="cs-item-text">Ontdek ons assortiment nieuwe en/of gebruikte boten en motoren.
                             </p>
                         </div>
                     </a>
@@ -213,9 +213,9 @@ eleventyNavigation:
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Winterstalling</h3>
-                            <p class="cs-item-text">Voor een veilige winterstalling van speedboten bent u bij ons aan
-                                het juiste adres, met speciale stallingsvoorzieningen voor uw boot om uw vaartuig
-                                tijdens het winterseizoen in optimale conditie te houden.
+                            <p class="cs-item-text">Wij zijn voorzien van een 600m² om uw boot veilig weg te bergen
+                                gedurende de
+                                wintermaanden. Meer info klik hier.
                             </p>
                         </div>
                     </a>
@@ -229,9 +229,9 @@ eleventyNavigation:
 
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Re-Powering motoren</h3>
-                            <p class="cs-item-text">In de voortdurend evoluerende botenmarkt wordt de vraag naar
-                                motorupgrades steeds prominenter, waarbij klanten vaak streven naar krachtiger, zuiniger
-                                of zelfs ombouw naar buitenboordmotoren</p>
+                            <p class="cs-item-text">De botenmarkt evolueert voortdurend waardoor er meer vraag is naar
+                                motorupgrades.
+                                Voor meer info. Klik verder.</p>
                         </div>
                     </a>
                 </li>
@@ -251,16 +251,11 @@ eleventyNavigation:
         <div class="cs-content">
             <div class="cs-flex">
                 <span class="cs-topper">Aankoop & verkoop</span>
-                <h2 class="cs-title">Nieuwe en en tweedehands boten te koop in Belgie</h2>
-                <p>Bij Brabus Boats zijn wij uw vertrouwde partner voor al uw vaarbehoeften. Of u nu op zoek bent naar
-                    een nieuwe boot of uw huidige wilt upgraden, ons toegewijde verkoopteam staat klaar om u bij elke
-                    stap te helpen. Wij bieden een divers aanbod boten van topkwaliteit, passend bij verschillende
-                    voorkeuren en budgetten. Met onze diepgaande kennis van de botensector en ons streven naar het
-                    leveren van uitmuntendheid, zijn we er trots op u te kunnen helpen bij het vinden van het perfecte
-                    schip dat aan uw wensen voldoet.</p>
+                <h2 class="cs-title">Nieuwe en 2<sup>de</sup> hands boten te koop in België</h2>
+                <p>Bij Brabusboats zijn wij uw vertrouwde partner voor al uw vragen over pleziervaartuigen. Wij voorzien
+                    zowel nieuwe als tweedehands vaartuigen in ons assortiment. Met onze kennis in de botensector
+                    kunnen we je zeker helpen om de juiste boot te vinden. Contacteer ons voor meer informatie.</p>
             </div>
-
-
         </div>
         <ul class="cs-card-group">
             <div class="cs-group">
@@ -307,37 +302,39 @@ eleventyNavigation:
                     <li class="cs-item">
                         {% if secondHand.data.status %}
                         <picture class="cs-picture">
-                        {% else %}
-                        <picture class="cs-picture sold">
-                        {% endif %}
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="{{ secondHand.data.image }}">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="{{ secondHand.data.image }}">
-                            <img loading="lazy" decoding="async" src="{{ secondHand.data.image }}"
-                                alt="{{ secondHand.data.imageAlt }}" width="413" height="480">
-                        </picture>
-
-                        <div class="cs-info">
-                            <div class="header-wrapper">
-                                <h3 class="cs-h3">{{ secondHand.data.title }}</h3>
-                                <picture class="cs-link-icon">
-                                    <img loading="lazy" decoding="async" src="/assets/images/icons/external-link.svg"
-                                        alt="link icon" width="22" height="22">
-                                </picture>
-                            </div>
-                            <div>
-                                {% if secondHand.data.status %}
-                                <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
-                                    {{ secondHand.data.price
-                                    }}</span>
-                                <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
-                                    secondHand.data.bouwjaar }}</span>
-                                {% else %}
-                                <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i> Verkocht</span>
+                            {% else %}
+                            <picture class="cs-picture sold">
                                 {% endif %}
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{{ secondHand.data.image }}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{{ secondHand.data.image }}">
+                                <img loading="lazy" decoding="async" src="{{ secondHand.data.image }}"
+                                    alt="{{ secondHand.data.imageAlt }}" width="413" height="480">
+                            </picture>
+
+                            <div class="cs-info">
+                                <div class="header-wrapper">
+                                    <h3 class="cs-h3">{{ secondHand.data.title }}</h3>
+                                    <picture class="cs-link-icon">
+                                        <img loading="lazy" decoding="async"
+                                            src="/assets/images/icons/external-link.svg" alt="link icon" width="22"
+                                            height="22">
+                                    </picture>
+                                </div>
+                                <div>
+                                    {% if secondHand.data.status %}
+                                    <span class="cs-available"><i class="fa-solid fa-euro-sign"></i>
+                                        {{ secondHand.data.price
+                                        }}</span>
+                                    <span class="cs-available"><i class="fa-solid fa-calendar-days"></i>{{
+                                        secondHand.data.bouwjaar }}</span>
+                                    {% else %}
+                                    <span class="cs-sold"><i class="fa-solid fa-anchor-circle-xmark"></i>
+                                        Verkocht</span>
+                                    {% endif %}
+                                </div>
                             </div>
-                        </div>
                     </li>
                 </a>
                 {% endif %}

@@ -1,12 +1,7 @@
 ---
 title: "Malibu Wakesetter VLX 22 – Monsoon 350HP "
-description: Deze prachtige wake/skiboot is CE gekeurd en heeft alle nodige
-  documenten. Deze boot wordt verkocht in opdracht van een klant ( dus overname
-  niet mogelijk). Boot heeft in najaar een groot onderhoud gekregen en staat
-  volledig klaar voor het nieuwe vaarseizoen.
-tags:
-  - tweedehands
-status: false
+status: true
+featured: false
 price: 66 000 excl btw
 image: /assets/images/blog/screenshot-2024-02-18-at-16-19-30-2bb67f80-1a04-40b6-9f06-49401c7e2f62-avif-image-498-×-664-pixels-.png
 imageAlt: Malibu
@@ -36,11 +31,17 @@ model: Wakesetter VLX 22
 lengte: 665cm ( zonder zwemplateau)
 breedte: 260cm
 diepgang: 0.69cm
-gewicht: 1950 kg
 bouwjaar: "2015"
 vermogen: 350 pk
 motorh: " 475.95 H ( diagnose verslag)"
 motor: Indmar Monsoon 350HP – 5.7L
+tags:
+  - tweedehands
+description: Deze prachtige wake/skiboot is CE gekeurd en heeft alle nodige
+  documenten. Deze boot wordt verkocht in opdracht van een klant ( dus overname
+  niet mogelijk). Boot heeft in najaar een groot onderhoud gekregen en staat
+  volledig klaar voor het nieuwe vaarseizoen.
+gewicht: 1950 kg
 ---
 Deze prachtige wake/skiboot is CE gekeurd en heeft alle nodige documenten. Deze boot wordt verkocht in opdracht van een klant ( dus overname niet mogelijk). Boot heeft in najaar een groot onderhoud gekregen en staat volledig klaar voor het nieuwe vaarseizoen.
 

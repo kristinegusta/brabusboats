@@ -464,3 +464,15 @@
         }
     }
 }
+
+/* Tablet - 768px */
+@media only screen and (min-width: 0) {
+    #RPsbsr-74 {
+        background-color: #1c1c1c;
+
+        .cs-text,
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+    }
+}

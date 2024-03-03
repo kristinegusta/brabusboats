@@ -38,13 +38,14 @@
             background-color: var(--primary);
             border-radius: 8px;
             padding: 8px 20px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: white;
             font-weight: 700;
             margin-bottom: 12px;
             margin-right: 6px;
             white-space: nowrap;
             display: inline-block;
+            text-transform: uppercase;
 
             i {
                 margin-right: 4px;
@@ -57,6 +58,8 @@
 
             h3 {
                 margin-bottom: 2rem;
+                color: var(--secondary);
+                text-transform: uppercase;
             }
 
             p,
@@ -79,6 +82,10 @@
             color: white;
             font-weight: 700;
             margin-bottom: 12px;
+
+            i {
+                margin-right: 4px;
+            }
         }
 
         .cs-content {
@@ -126,6 +133,8 @@
             h3 {
                 margin-bottom: 2rem;
                 margin-top: 2rem;
+                color: var(--secondary);
+                text-transform: uppercase;
             }
 
             li {
@@ -385,7 +394,13 @@
 
             h3 {
                 margin-top: 0;
+                color: var(--secondary);
+                text-transform: uppercase;
             }
+        }
+
+        .cs-picture img {
+            aspect-ratio: 1/1;
         }
 
         .cs-content {
@@ -401,6 +416,7 @@
         .tohatsu-img {
             max-width: 500px;
             max-height: unset !important;
+            aspect-ratio: unset !important;
         }
     }
 }
@@ -418,6 +434,8 @@
 
         h3 {
             margin-bottom: 2rem;
+            color: var(--secondary);
+            text-transform: uppercase;
         }
 
         .cs-container.title {

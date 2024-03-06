@@ -21,6 +21,18 @@ galleryImages:
     label: "6"
   - image: /assets/images/blog/untitled6.jpeg
     label: "6"
+  - image: /assets/images/blog/img-20240304-wa0016.jpg
+    label: "7"
+  - image: /assets/images/blog/img-20240304-wa0012.jpg
+    label: "8"
+  - image: /assets/images/blog/img-20240304-wa0010.jpg
+    label: "9"
+  - image: /assets/images/blog/img-20240304-wa0024.jpg
+    label: "10"
+  - image: /assets/images/blog/img-20240304-wa0017.jpg
+    label: "11"
+  - image: /assets/images/blog/img-20240304-wa0015.jpg
+    label: "12"
 merk: Fibrafort
 model: 242 GTC
 lengte: 7.37m

@@ -581,6 +581,8 @@
     margin-bottom: 2rem;
     max-width: 20ch;
     color: var(--bodyTextColorWhite);
+    margin-left: auto;
+    margin-right: auto;
   }
   #blog-986 .cs-available {
     font-size: 12px;

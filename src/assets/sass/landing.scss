@@ -697,6 +697,8 @@
             margin-bottom: calc(32 / 16 * 1rem);
             max-width: 20ch;
             color: var(--bodyTextColorWhite);
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cs-available {

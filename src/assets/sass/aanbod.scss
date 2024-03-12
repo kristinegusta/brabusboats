@@ -17,6 +17,7 @@
         p {
             color: white;
             margin: 2rem 0 1rem 0;
+            max-width: 75ch;
         }
 
         .cs-container {
@@ -369,8 +370,7 @@
         }
 
         .cs-group {
-            width: 100%;
-            flex: 1 0 21%;
+            width: 31%;
         }
 
         .cs-button-solid {

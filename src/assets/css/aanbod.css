@@ -13,6 +13,7 @@
   #blog-986 p {
     color: white;
     margin: 2rem 0 1rem 0;
+    max-width: 75ch;
   }
   #blog-986 .cs-container {
     width: 100%;
@@ -307,8 +308,7 @@
     flex-wrap: wrap;
   }
   #blog-986 .cs-group {
-    width: 100%;
-    flex: 1 0 21%;
+    width: 31%;
   }
   #blog-986 .cs-button-solid {
     width: fit-content;

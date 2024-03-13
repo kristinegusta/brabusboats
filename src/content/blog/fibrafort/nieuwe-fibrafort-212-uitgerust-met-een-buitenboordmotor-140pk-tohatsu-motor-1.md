@@ -5,7 +5,7 @@ description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
   tijdsloze nardo grey kleur. "
 status: true
 featured: false
-price: "49 950 excl btw "
+price: "op aanvraag  "
 image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:

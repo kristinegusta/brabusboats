@@ -1,7 +1,7 @@
 ---
 title: FourWinns 180 horizon BR
-status: true
-featured: true
+status: false
+featured: false
 price: €15750
 image: /assets/images/blog/20230807_190755.jpg
 imageAlt: "Hierbij verkopen wij in opdracht van klant volgende boot: ( geen

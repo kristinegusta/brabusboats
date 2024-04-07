@@ -1,7 +1,7 @@
 ---
 title: "Fourwinns 170 horizon - New tohatsu 60hp "
 status: true
-featured: false
+featured: true
 price: "14450"
 image: /assets/images/blog/img-20240403-wa0021.jpg
 imageAlt: "Deze verzorgde bowrider is in goede staat.  De boot is zeer handig

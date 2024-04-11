@@ -1,11 +1,10 @@
 ---
 title: Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor
-description: "Deze prachtige Braziliaanse bowrider boot is CE gekeurd en
-  volledig gebouwd met versterkte polyester. Deze boot is uitgerust met de mooie
-  tijdsloze nardo grey kleur. "
+description: NORMAAL  €60000 btw incl   NU DEMOKORTING VAN - €11000 .  ONTDEK
+  HEM VOOR  €49900 btw incl
 status: true
 featured: false
-price: "op aanvraag  "
+price: €49.900 btw incl!
 image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:

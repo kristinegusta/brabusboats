@@ -1,10 +1,10 @@
 ---
 title: Fibrafort 212 uitgerust met een buitenboordmotor 140pk tohatsu motor
 description: NORMAAL  €60000 btw incl   NU DEMOKORTING VAN - €11000 .  ONTDEK
-  HEM VOOR  €49900 btw incl
+  HEM VOOR  €48750 btw inc
 status: true
 featured: false
-price: €49.900 btw incl!
+price: €48750
 image: /assets/images/blog/screenshot-2024-02-13-at-13-01-15-new-fibrafort-212-–-140hp-tohatsu.png
 imageAlt: Fibrafort
 galleryImages:

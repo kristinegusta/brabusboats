@@ -3,7 +3,7 @@ title: Fibrafort 242 GTO - 2024
 description: Nieuwe sportieve bowrider met vele opties mogelijk
 status: true
 featured: false
-price: "54500"
+price: "57500"
 image: /assets/images/blog/20240619_122009.jpg
 imageAlt: fibrafort 242 GTO
 galleryImages:

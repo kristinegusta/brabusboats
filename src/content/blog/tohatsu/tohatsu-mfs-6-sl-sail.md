@@ -25,7 +25,7 @@ specificaties motor:
 
 \- voorraad: 1
 
-\- extra: ingebouwde benzinetank
+\- extra: externe benzinetank met aansluiting
 
 PRIJS: €1349.15 incl btw
 

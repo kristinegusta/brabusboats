@@ -13,39 +13,23 @@ tags:
 ---
 Enigste Belgische dealer van Tohatsu outboard engines.
 
-
-
-
-
 Nieuwe Tohatsu MFS4D S (Kortstaart)
 
-
-
 specificaties motor:
-
-
 
 \- Adviesprijs: €1149 incl btw
 
 \- conditie: Nieuw
 
-\- voorraad: 3
+\- voorraad: 1
 
 \- extra: ingebouwde benzinetank
 
 PRIJS: €1049 incl btw
 
-
-
 Wij zijn gelegen te Bornem en leveren alle nieuwe tohatsu's buitenboordmotoren vanaf 2.5pk tot 140pk.
 
-
-
 Zoekt u een bepaalde motor contacteer ons en wij helpen u graag verder.
-
-
-
-
 
 Brabusboats bv
 

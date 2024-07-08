@@ -1,8 +1,8 @@
 ---
 title: " Tohatsu MFS140A ETL "
 description: Enigste Belgische dealer van Tohatsu outboard engines.
-status: true
-price: €12495 incl btw
+status: false
+price: verkocht
 image: /assets/images/blog/demo.jpg
 imageAlt: tohatsu engine
 tags:

@@ -10,19 +10,7 @@ tags:
 ---
 Enigste Belgische dealer van Tohatsu outboard engines.
 
-
-
-
-
-
-
 Nieuwe Tohatsu MFS140A ETL ( opgehangen op boot als demo) NIET GEVAREN!!!
-
-
-
-
-
-
 
 specificaties motor:
 
@@ -36,7 +24,7 @@ specificaties motor:
 
 \- OPTIE: Hydraunische bestuuring ( Sea star) 1250 euro
 
-PRIJS VAARKLAAR: €12495 incl btw
+PRIJS VAARKLAAR: VERKOCHT
 
 Wij zijn gelegen te Bornem en leveren alle nieuwe tohatsu's buitenboordmotoren vanaf 2.5pk tot 140pk.
 

@@ -1,7 +1,7 @@
 ---
 title: Quicksilver 640 Pilothouse - Yamaha 100hp (2019)
-status: true
-featured: true
+status: false
+featured: false
 price: €23450
 image: /assets/images/blog/20241101_084529.jpg
 imageAlt: Quicksilver 640 Pilothouse

@@ -1,7 +1,7 @@
 ---
 title: "Malibu Wakesetter VLX 22 – Monsoon 350HP "
 status: true
-featured: true
+featured: false
 price: 66 000 excl btw
 image: /assets/images/blog/20240414_123905.jpg
 imageAlt: Malibu

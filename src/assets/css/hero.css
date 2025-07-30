@@ -526,4 +526,82 @@
   }
 }
 
+/* Address Change Banner Styles */
+@media only screen and (min-width: 0rem) {
+  .address-change-banner {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primaryLight) 100%);
+    border: 1.5px solid var(--bodyTextColorWhite);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(199, 46, 69, 0.10);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    font-family: "Raleway", Arial, sans-serif;
+  }
+
+  .banner-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner-icon {
+    color: var(--bodyTextColorWhite);
+    flex-shrink: 0;
+    margin-top: 2px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+  }
+
+  .banner-text {
+    color: var(--bodyTextColorWhite);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: none;
+    letter-spacing: 0.01em;
+  }
+
+  .banner-text strong {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .banner-text span {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--bodyTextColorWhite);
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .address-change-banner {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 14px;
+  }
+  .banner-text {
+    font-size: 1.08rem;
+  }
+  .banner-content {
+    gap: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 81.25rem) {
+  .address-change-banner {
+    margin-top: 2.5rem;
+    padding: 1.75rem 3rem;
+    border-radius: 18px;
+  }
+  .banner-text {
+    font-size: 1.15rem;
+  }
+}
+
 /*# sourceMappingURL=hero.css.map */

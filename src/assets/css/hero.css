@@ -56,7 +56,7 @@
     /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
     /* 144px - 300px - leaving extra space for the navigation */
     /* changes on tablet */
-    padding: clamp(9rem, 25.95vw, 18.75rem) 0 0;
+    padding: clamp(8rem, 20.95vw, 16.75rem) 0 0;
     /* 60px - 200px */
     padding-bottom: clamp(3.75rem, 12.5vw, 25rem);
     margin: auto;

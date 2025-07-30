@@ -4,8 +4,8 @@ description: 'Contact voor Verkoop boten , Onderhoud binnen/buitenboord motoren,
 preloadImg: '/assets/images/cta.webp'
 permalink: 'contact/'
 eleventyNavigation:
-    key: Contact
-    order: 700
+key: Contact
+order: 700
 ---
 
 {% extends "layouts/base.html" %}
@@ -25,8 +25,8 @@ eleventyNavigation:
     <picture>
         <source media="(max-width: 600px)" srcset="/assets/images/cta.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/cta.webp">
-        <img aria-hidden="true" decoding="async" src="/assets/images/cta.webp" alt="antwerp" loading="eager" width="2500"
-            height="1667">
+        <img aria-hidden="true" decoding="async" src="/assets/images/cta.webp" alt="antwerp" loading="eager"
+            width="2500" height="1667">
     </picture>
 </section>
 
@@ -82,6 +82,10 @@ eleventyNavigation:
                     {{client.address.city}}
                     {{client.address.zip}}
                 </span>
+            </a>
+            <a class="cs-link" href="https://maps.google.com/?q=Kruisstraat+33,+Dendermonde"
+                style="color: var(--primary); font-weight: 600; display: block; margin-top: 0.5em;">
+                Nieuw adres: Kruisstraat 33, Dendermonde (vanaf 01/09/2025)
             </a>
 
             <!-- Background Image-->

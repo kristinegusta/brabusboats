@@ -93,9 +93,7 @@
             margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
             /* changes on tablet */
             margin-left: calc(16 / 16 * 1rem);
-            width: 80vw;
-            /* 464px - 562px */
-            max-width: clamp(29rem, 60vw, 35.125rem);
+            margin-right: calc(16 / 16 * 1rem);
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
@@ -373,7 +371,7 @@
         padding: 0 clamp(2rem, 5vw, 2.5rem);
 
         .cs-container {
-            padding: clamp(3rem, 1.95vw, 4.75rem) 0 calc(64 / 16 * 1rem) 0;
+            padding: clamp(3rem, 1.95vw, 4.75rem) 1rem calc(64 / 16 * 1rem) 1rem;
 
             &:after {
                 /* Right Line */
@@ -403,13 +401,13 @@
         }
 
         .cs-flex-group {
-            /* 44px - 88px */
-            margin-left: clamp(2.75rem, 5.9vw, 5.5rem);
-            margin-right: clamp(2.75rem, 5.9vw, 5.5rem);
-            width: calc(100% - clamp(2.75rem, 5.9vw, 5.5rem));
-            max-width: unset;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 60rem;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
         .cs-subtitle {

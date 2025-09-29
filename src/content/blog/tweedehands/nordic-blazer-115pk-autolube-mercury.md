@@ -1,6 +1,6 @@
 ---
 title: Nordic Blazer - 115pk autolube Mercury
-status: true
+status: false
 featured: true
 price: "9750"
 image: /assets/images/blog/20250221_125257.jpg

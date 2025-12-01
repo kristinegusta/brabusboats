@@ -1,7 +1,7 @@
 ---
 title: Quicksilver Sport 470 - 50HP Honda
 status: false
-featured: true
+featured: false
 price: "10750"
 image: /assets/images/blog/20250205_164427.jpg
 imageAlt: Quicksilver sport 470

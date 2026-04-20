@@ -44,7 +44,7 @@ lengte: 15.28M
 breedte: 3.50M
 diepgang: 1.25M
 gewicht: 9000kg
-bouwjaar: "1993"
+bouwjaar: "1997"
 vermogen: 2 x 230pk ( Diesel) Volvo Penta KAD42
 motorh: 970h Bakboordmotor  - 1450H stuurboordmotor
 motor: Volvo Penta

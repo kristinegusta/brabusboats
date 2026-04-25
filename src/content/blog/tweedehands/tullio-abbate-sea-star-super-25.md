@@ -37,9 +37,9 @@ breedte: 2.35M
 diepgang: 0.76M
 gewicht: 2150kg
 bouwjaar: "1993"
-vermogen: 330hp
+vermogen: 300hp
 motorh: "-"
-motor: "Mercruiser 7.4L "
+motor: "Mercruiser 5.7L "
 drive: Alpha One
 tags:
   - tweedehands
@@ -48,14 +48,12 @@ Deze Boot word verkocht in Opdracht van de klant. Deze stond laatste 4-5 jaar in
 
 Deze Tullio Abbate 25 Sea Star is een een italiaanse boot dat gekend staat voor zijn wendbaarheid maar ook comfort. 
 
-De boot is uitgerust met een oersterke V8 7.4L Mercruiser met Open uitlaat systeem van het merk Corsa. De open uitlaten kan je open maar ook gesloten zetten. 
+De boot is uitgerust met een oersterke V8 5.7L Mercruiser met Open uitlaat systeem van het merk Corsa. De open uitlaten kan je open maar ook gesloten zetten. 
 
 Deze boot heeft zonet volgende zaken gekregen: 
 
 \- motorolie, staartolie, oliefilter, benzinefilters, carburateur is open gegaan en gereinigd , anodes, impeller, bougies. Factuur aanwezig. 
 
 Extra: biminitop aanwezig, zwemplateau , Dubbel as trailer met papieren meerprijs €2500
-
-
 
 Voor meer informatie mag er altijd contact opgenomen worden.
